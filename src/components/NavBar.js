@@ -1,12 +1,13 @@
 import React from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
+import logo from "../assets/soundcheck-logo-light.png";
 
 const NavBar = () => {
   return (
     <Navbar expand="md" fixed="top">
       <Container>
         <Navbar.Brand>
-          
+            <img src={logo} alt="logo" height="45" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
