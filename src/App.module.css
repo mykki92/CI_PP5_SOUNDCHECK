@@ -6,6 +6,11 @@
 .Main {
   padding-top: 81px;
 }
+.FillerImage {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
 a {
   color: #000000;
   transition: color ease-in-out 0.3s;
