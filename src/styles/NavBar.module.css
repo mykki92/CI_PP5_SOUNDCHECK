@@ -3,13 +3,14 @@
 }
 
 .NavLink {
-  padding: 5px;
+    padding: 5px;
 }
 
 .Active i {
-  
+    color: #555555;
+}
+.Active a {
+    color: #555555;
+    text-decoration: underline;
 }
 
-i {
-    color: #000000;
-}
