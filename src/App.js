@@ -41,7 +41,7 @@ function App() {
             path="/liked"
             render={() => (
               <PostsPage
-                message="No results found, adjust your search or follow more accounts"
+                message="No results found, adjust your search or like more posts"
                 filter={`likes__owner__profile=${profile_id}&ordering=-likes__created_at&`} 
               />
             )} 
