@@ -14,9 +14,7 @@ import btnStyles from "../../styles/Button.module.css";
 import Asset from "../../components/Asset";
 import { Image } from "react-bootstrap";
 
-
 function PostCreateForm() {
-
   const [errors, setErrors] = useState({});
 
   const [postData, setPostData] = useState({
@@ -26,6 +24,23 @@ function PostCreateForm() {
   });
   const { title, content, image } = postData;
 
+  const handleChange = (event) => {
+    setPostData({
+      ...postData,
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  const handleChangeImage = (event) => {
+    if (event.target.files.length) {
+      URL.revokeObjectURL(image);
+      setPostData({
+        ...postData,
+        image: URL.createObjectURL(event.target.files[0]),
+      });
+    }
+  };
+
   const textFields = (
     <div className="text-center">
       <Form.Group>
@@ -33,6 +48,8 @@ function PostCreateForm() {
         <Form.Control
           type="text"
           name="title"
+          value={title}
+          onChange={handleChange}
         />
       </Form.Group>
       <Form.Group>
@@ -41,6 +58,8 @@ function PostCreateForm() {
           as="textarea"
           rows={6}
           name="content"
+          value={content}
+          onChange={handleChange}
         />
       </Form.Group>
 
@@ -93,6 +112,7 @@ function PostCreateForm() {
               <Form.File
                 id="image-upload"
                 accept="image/*"
+                onChange={handleChangeImage}
               />
             </Form.Group>
             <div className="d-md-none">{textFields}</div>
