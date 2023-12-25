@@ -1,102 +1,66 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+## User Stories
 
-Welcome,
+### First sprint
 
-This is the Code Institute student template for React apps on the Codeanywhere IDE. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.  
-DO NOT use this template if you are using the Gitpod IDE. Use the following command instead:  
-`npx create-react-app . --template git+https://github.com/Code-Institute-Org/cra-template-moments.git --use-npm`
+#### Navigation 
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **31st August, 2023**
+1. As a user, I can view the Home Page so that I can understand what the website is about.
+2. As a user, I can see a navbar on every page, so that I can easily return to main page and access my profile page.
+3. As a logged-out user, I can see log in and sign up options so that I can log in or sign up.
+ 
+#### Authentication 
 
-## Codeanywhere Reminders
+4. As a new user, I can create a new account to access the app.
+5. As a returning user, I can log in with my existing credentials so that I can access the app.
+6. As a user, I can maintain my logged-in status until I choose to log out so that my use of app is not compromised. 
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### Second sprint
 
-To log into the Heroku toolbelt CLI:
+#### Posts 
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+7. As a user, I can create posts to share my images with the community 
+8. As a user, I can title my post so that other users can find it by its title 
+9. As a user, I can view other people’s posts so that I can get inspired by their images 
+10.  As a user, I can view the details of a single post so that I can see its full description and other users’ comments 
+11. As user, I can like a specific post to show my interest
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+#### The Post Page 
+ 
+14. As user, I can add comments to a post so that I can share my thoughts about the content with the community 
+15. As a user, I can see when the comments were created so that I know how old a comment is 
+16. As a user, I can edit and update my existing comments 
+17. As a user, I can delete my existing comments from a post 
+18. As a user, I can edit my post title, description and image to update my post after it was created
 
----
+### Third sprint
 
-Happy coding!
+#### Main page 
 
-# Getting Started with Create React App
+19. As a user, I can view posts ordered by most recently added so that I am up to date with the newest content 
+20. As a user, I can keep scrolling through the posts so that they are loaded automatically and I don't have to select the next page 
+21. As a user, I can see all posts I have previously liked to save any content of interest
+22. As a user, I can view posts from users I followed, so I can follow their activity
+24. As a user, I can search for posts with keywords so that I can find the posts I am interested in 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### User Profile Page 
 
-## Available Scripts
+25. As a user, I can add my profile avatar so that other users can easily identify me 
+26. As a user, I can view user's avatars so that I can easily identify other users profiles
+27. As a user, I can update my picture and description on the profile page so that other users can view up to date info about me 
+28. As a user, I can change the password to my account to keep my profile secure 
 
-In the project directory, you can run:
+### Fourth sprint
 
-### `npm install`
+#### Other Users Profiles 
 
-Installs the required npm packages.
+29. As a user, I can view all the posts by a specific user 
+30. As a user, I can view other users’ profiles with their profile description, number of posts, followers and users followed so that I can learn more about them 
+31. As a user, I can follow and unfollow other users so that I can get specific users’ posts in my posts feed 
+32. As a user, I can see a list of the most followed profiles so that I can see trending content 
 
-### `npm start`
+#### General
 
-Runs the app in the development mode.\
-Open port 3000 to view it in the browser.
+33. As a site owner I want my site to be fully responsive so that user experience is positive across all devices
+34. As a site owner, I want users to come to a 404 error page so that they can easily understand the error and how to return to the site pages if they enter an invalid URL
+35. As a site user, I can view feedback messages, so that I know if my comment/profile/post has been updated
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
