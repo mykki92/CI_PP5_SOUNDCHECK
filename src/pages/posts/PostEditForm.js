@@ -73,16 +73,20 @@ function PostEditForm() {
     formData.append("content", content);
     formData.append("image", imageInput.current.files[0]);
 
-    try {
-      const { data } = await axiosReq.post("/posts/", formData);
-      history.push(`/posts/${data.id}`);
-    } catch (err) {
-      console.log(err);
-      if (err.response?.status !== 401) {
-        setErrors(err.response?.data);
+    if (imageInput?.current?.files[0]) {
+        formData.append("image", imageInput.current.files[0]);
       }
-    }
-  };
+  
+      try {
+        await axiosReq.put(`/posts/${id}/`, formData);
+        history.push(`/posts/${id}`);
+      } catch (err) {
+        console.log(err);
+        if (err.response?.status !== 401) {
+          setErrors(err.response?.data);
+        }
+      }
+    };
 
   const textFields = (
     <div className="text-center">
