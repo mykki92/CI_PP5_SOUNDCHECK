@@ -134,8 +134,8 @@ function ProfilePage() {
   );
 
   return (
-    <Row>
-      <Col className="py-2 p-0 p-lg-2" lg={12}>
+    <Row className="d-flex justify-content-center">
+      <Col className="py-2 p-0 p-lg-2" lg={10}>
         <Container className={appStyles.Content}>
           {hasLoaded ? (
             <>

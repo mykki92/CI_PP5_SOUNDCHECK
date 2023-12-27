@@ -6,11 +6,20 @@
     padding: 5px;
 }
 
+.NavLink:hover {
+    color: #c1c1c5;
+}
+
+.Active {
+    color: #c1c1c5;
+}
+
 .Active i {
-    color: #555555;
+    color: #c1c1c5;
 }
-.Active a {
-    color: #555555;
-    text-decoration: underline;
+
+i:hover {
+    color: #c1c1c5;
 }
+
 
