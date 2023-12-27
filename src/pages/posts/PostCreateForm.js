@@ -128,6 +128,9 @@ function PostCreateForm() {
                   <figure>
                     <Image className={appStyles.Image} src={image} rounded />
                   </figure>
+                  <div>
+                    
+                  </div>
                 </>
               ) : (
                 <Form.Label
