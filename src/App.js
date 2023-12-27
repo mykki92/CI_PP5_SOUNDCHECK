@@ -13,6 +13,7 @@ import PostEditForm from "./pages/posts/PostEditForm";
 import ProfilePage from "./pages/profiles/ProfilePage";
 import UsernameForm from "./pages/profiles/UsernameForm";
 import PasswordForm from "./pages/profiles/PasswordForm";
+import ProfileEditForm from "./pages/profiles/ProfileEditForm";
 
 function App() {
   const currentUser = useCurrentUser();
@@ -65,6 +66,11 @@ function App() {
             exact
             path="/profiles/:id/edit/password"
             render={() => <PasswordForm />}
+          />
+          <Route
+            exact
+            path="/profiles/:id/edit"
+            render={() => <ProfileEditForm />}
           />
           <Route render={() => <p>Page not found!</p>} />
         </Switch>
