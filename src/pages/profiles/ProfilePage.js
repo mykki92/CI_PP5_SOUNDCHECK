@@ -112,11 +112,21 @@ function ProfilePage() {
   );
 
   const mainProfilePosts = (
-    <div className={styles.GridContainer}>
-      {profilePosts.results.map((post) => (
-        <Post key={post.id} {...post} setPosts={setProfilePosts} />
-      ))}
-    </div>
+    <>
+      <hr />
+      {profilePosts.results.length ? (
+        <div className={styles.GridContainer}>
+          {profilePosts.results.map((post) => (
+            <Post key={post.id} {...post} setPosts={setProfilePosts} />
+          ))}
+        </div>
+      ) : (
+        <Asset
+          src={NoResults}
+          message={`No results found, ${profile?.owner} hasn't posted yet.`}
+        />
+      )}
+    </>
   );
 
   return (
