@@ -65,18 +65,18 @@ const NavBar = () => {
   const loggedOutIcons = (
     <>
       <NavLink
-        className={styles.NavLink}
-        activeClassName={styles.Active}
-        to="/signin"
-      >
-        <i className="fas fa-sign-in-alt"></i>Sign in
-      </NavLink>
-      <NavLink
         to="/signup"
         className={styles.NavLink}
         activeClassName={styles.Active}
       >
         <i className="fas fa-user-plus"></i>Sign up
+      </NavLink>
+      <NavLink
+        className={styles.NavLink}
+        activeClassName={styles.Active}
+        to="/signin"
+      >
+        <i className="fas fa-sign-in-alt"></i>Sign in
       </NavLink>
     </>
   );

@@ -27,8 +27,8 @@ function App() {
       {!currentUser ? (
         <Switch>
           <Route exact path="/" render={() => <LandingPage />} />
-          <Route exact path="/signin" render={() => <SignInForm />} />
           <Route exact path="/signup" render={() => <SignUpForm />} />
+          <Route exact path="/signin" render={() => <SignInForm />} />
           <Route render={() => <LandingPage />} />
         </Switch>
       ) : (
@@ -60,8 +60,6 @@ function App() {
               />
             )} 
           />
-          <Route exact path="/signin" render={() => <SignInForm />} />
-          <Route exact path="/signup" render={() => <SignUpForm />} />
           <Route exact path="/posts/create" render={() => <PostCreateForm />} />
           <Route exact path="/posts/:id" render={() => <PostPage />} />
           <Route exact path="/posts/:id/edit" render={() => <PostEditForm />} />
