@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Media } from "react-bootstrap";
+import { Media, OverlayTrigger, Tooltip } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import { DropdownMenu } from "../../components/DropdownMenu";
@@ -18,6 +18,9 @@ const Comment = (props) => {
     id,
     setPost,
     setComments,
+    comments_count,
+    likes_count,
+    like_id,
   } = props;
 
   const [showEditForm, setShowEditForm] = useState(false);
@@ -42,6 +45,38 @@ const Comment = (props) => {
         results: prevComments.results.filter((comment) => comment.id !== id),
       }));
     } catch (err) {}
+  };
+
+  const handleLike = async () => {
+    try {
+      const { data } = await axiosRes.post("/likes/", { post: id });
+      setComments((prevComments) => ({
+        ...prevComments,
+        results: prevComments.results.map((comment) => {
+          return post.id === id
+            ? { ...comment, likes_count: comment.likes_count + 1, like_id: data.id }
+            : comment;
+        }),
+      }));
+    } catch (err) {
+      // console.log(err);
+    }
+  };
+
+  const handleUnlike = async () => {
+    try {
+      await axiosRes.delete(`/likes/${like_id}/`);
+      setComments((prevComments) => ({
+        ...prevComments,
+        results: prevComments.results.map((comment) => {
+          return comment.id === id
+            ? { ...comment, likes_count: comment.likes_count - 1, like_id: null }
+            : comment;
+        }),
+      }));
+    } catch (err) {
+      // console.log(err);
+    }
   };
 
   return (

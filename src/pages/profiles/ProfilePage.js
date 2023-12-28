@@ -112,25 +112,11 @@ function ProfilePage() {
   );
 
   const mainProfilePosts = (
-    <>
-      <hr />
-      {profilePosts.results.length ? (
-        <InfiniteScroll
-          children={profilePosts.results.map((post) => (
-            <Post key={post.id} {...post} setPosts={setProfilePosts} />
-          ))}
-          dataLength={profilePosts.results.length}
-          loader={<Asset spinner />}
-          hasMore={!!profilePosts.next}
-          next={() => fetchMoreData(profilePosts, setProfilePosts)}
-        />
-      ) : (
-        <Asset
-          src={NoResults}
-          message={`No results found, ${profile?.owner} hasn't posted yet.`}
-        />
-      )}
-    </>
+    <div className={styles.GridContainer}>
+      {profilePosts.results.map((post) => (
+        <Post key={post.id} {...post} setPosts={setProfilePosts} />
+      ))}
+    </div>
   );
 
   return (
