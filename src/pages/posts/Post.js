@@ -133,4 +133,22 @@ const Post = (props) => {
   );
 };
 
-export default Post;
+const ProfilePost = (props) => {
+  const {
+    id,
+    title,
+    image,
+  } = props;
+
+  return (
+    <Card className={styles.Post}>
+      <Card.Body>
+        <Link to={`/posts/${id}`}>
+            <Card.Img src={image} alt={title} />
+        </Link>
+      </Card.Body>
+    </Card>
+  );
+}
+
+export { Post, ProfilePost };
