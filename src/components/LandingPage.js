@@ -63,7 +63,7 @@ const LandingPage = () => {
                     Sign up
                   </Button>
                 </Link>
-                <Link to="/login">
+                <Link to="/signin">
                   <Button className={`${appStyles.button} ${styles.LandingButton} mb-3`}>
                     Sign in
                   </Button>
