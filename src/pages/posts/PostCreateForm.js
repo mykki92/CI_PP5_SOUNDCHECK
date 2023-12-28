@@ -134,7 +134,7 @@ function PostCreateForm() {
                 </>
               ) : (
                 <Form.Label
-                  className="d-flex justify-content-center"
+                  className={`${styles.UploadPicture} d-flex justify-content-center`}
                   htmlFor="image-upload"
                 >
                   <Asset
@@ -143,7 +143,6 @@ function PostCreateForm() {
                   />
                 </Form.Label>
               )}
-
               <Form.File
                 id="image-upload"
                 accept="image/*"
