@@ -13,6 +13,7 @@ import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
+import FeedbackMessage from "../../components/FeedbackMessage";
 
 const PasswordForm = () => {
   const history = useHistory();
@@ -26,6 +27,7 @@ const PasswordForm = () => {
   const { new_password1, new_password2 } = userData;
 
   const [errors, setErrors] = useState({});
+  const [showAlert, setShowAlert] = useState(false);
 
   const handleChange = (event) => {
     setUserData({
@@ -45,9 +47,11 @@ const PasswordForm = () => {
     event.preventDefault();
     try {
       await axiosRes.post("/dj-rest-auth/password/change/", userData);
-      history.goBack();
+      setShowAlert(true);
+      setTimeout(function () {
+        history.goBack();
+      }, 2500);
     } catch (err) {
-      // console.log(err);
       setErrors(err.response?.data);
     }
   };
@@ -55,6 +59,12 @@ const PasswordForm = () => {
   return (
     <Row>
       <Col className="py-2 mx-auto text-center" md={6}>
+        {showAlert && (
+          <FeedbackMessage
+            variant="info"
+            message="Password has been changed. Taking you back to your profile's page..."
+          />
+        )}
         <Container className={appStyles.Content}>
           <Form onSubmit={handleSubmit}>
             <Form.Group>
