@@ -111,7 +111,27 @@ The key functionality aspects:
 ### Fonts
 
 ### Wireframes
-
+<details><summary>Landing Page</summary>
+<img src="docs/wireframes/wireframe-landing-page.png">
+</details>
+<details><summary>Sign Up</summary>
+<img src="docs/wireframes/wireframe-signup.png">
+</details>
+<details><summary>Sign In</summary>
+<img src="docs/wireframes/wireframe-signin.png">
+</details>
+<details><summary>Home/Feed/Liked</summary>
+<img src="docs/wireframes/wireframe-home-feed-liked.png">
+</details>
+<details><summary>Add Post</summary>
+<img src="docs/wireframes/wireframe-.png">
+</details>
+<details><summary>Post</summary>
+<img src="docs/wireframes/wireframe-.png">
+</details>
+<details><summary>Profile</summary>
+<img src="docs/wireframes/wireframe-.png">
+</details>
 
 ## Technologies Used
 ### Languages
