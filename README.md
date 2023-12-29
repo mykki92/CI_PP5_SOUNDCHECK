@@ -195,8 +195,8 @@ The API for this Front-End application was built with the Django REST Framework.
 |-------------|------------|---------------------|-------------------|
 | Home | Navigate to https://soundcheck-13ffdc050395.herokuapp.com/ | Landing page loads if logged out, redirected to home page if logged in | Works as expected |
  
-<details><summary>Screenshot</summary>
-<img src="docs/testing/user-stories-testing/.png">
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user-story-testing-01.png">
 </details>
 <br>
 <hr>
@@ -208,8 +208,9 @@ The API for this Front-End application was built with the Django REST Framework.
 |-------------|------------|---------------------|-------------------|
 | Navbar | Go to the top of any page of the application | Navbar with all page links is displayed | Works as expected |
  
-<details><summary>Screenshot</summary>
-<img src="docs/testing/user-stories-testing/.png">
+<details><summary>Screenshots</summary>
+  <img src="docs/testing/user-story-testing-02-01.png">
+  <img src="docs/testing/user-story-testing-02-02.png">
 </details>
 <br>
 <hr>
@@ -221,8 +222,8 @@ The API for this Front-End application was built with the Django REST Framework.
 |-------------|------------|---------------------|-------------------|
 | SignUp/SignIn | If signed in, click on the sign out button in the navbar | Redirects to the home page and navbar displays options to sign in or sign up | Works as expected |
 
-<details><summary>Screenshot</summary>
-<img src="docs/testing/user-stories-testing/.png">
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user-story-testing-03.png">
 </details>
 <br>
 <hr>
@@ -232,10 +233,12 @@ The API for this Front-End application was built with the Django REST Framework.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| SignUp/SignIn | From the home page, click the sign up button in the navbar, enter a username and password | Redirects user to sign in page, after entering their credentials the user is taken to the home page where new navbar links are displayed to access the site features | Works as expected |
+| SignUp/SignIn | From the landing page, click the sign up button in the navbar, enter a username and password | Redirects user to sign up page, after entering their credentials the user is taken to the sign in page where they can access their profile and the site features | Works as expected |
 
-<details><summary>Screenshot</summary>
-<img src="docs/testing/user-stories-testing/.png">
+<details><summary>Screenshots</summary>
+  <img src="docs/testing/user-story-testing-04-01.png">
+  <img src="docs/testing/user-story-testing-04-02.png">
+  <img src="docs/testing/user-story-testing-04-03.png">
 </details>
 <br>
 <hr>
@@ -247,8 +250,9 @@ The API for this Front-End application was built with the Django REST Framework.
 |-------------|------------|---------------------|-------------------|
 | SignUp/SignIn | If signed out, click on the ‘sign in’ button in the navbar, enter your username and password | Signs user in and displays the main posts page. Links to features and profile now appear in the navbar | Works as expected |
 
-<details><summary>Screenshot</summary>
-<img src="docs/testing/user-stories-testing/.png">
+<details><summary>Screenshots</summary>
+  <img src="docs/testing/user-story-testing-05-01.png">
+  <img src="docs/testing/user-story-testing-05-02.png">
 </details>
 <br>
 <hr>
@@ -260,9 +264,6 @@ The API for this Front-End application was built with the Django REST Framework.
 |-------------|------------|---------------------|-------------------|
 |  | Sign in to the application and do not sign out within 24 hours | Users stay signed in for 24 hours unless they sign out themselves | Works as expected |
 
-<details><summary>Screenshot</summary>
-<img src="docs/testing/user-stories-testing/.png">
-</details>
 <br>
 <hr>
 <br>
@@ -274,20 +275,23 @@ The API for this Front-End application was built with the Django REST Framework.
 | Add Post | Click the ‘Add post’ icon to the left of the navbar | A form page is displayed where you can upload an image and give it a title and caption. Once posted it will appear in the main posts page and on your profile page | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="docs/testing/user-stories-testing/.png">
+  <img src="docs/testing/user-story-testing-07-01.png">
+  <img src="docs/testing/user-story-testing-07-02.png">
+  <img src="docs/testing/user-story-testing-07-03.png">
 </details>
 <br>
 <hr>
 <br>
 
-8. As a user, I can title my post so that other users can find it when searching by its title.
+8. As a user, I can caption my post so that other users can find it when searching by its caption.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Add Post | Navigate to the “Add Post” page . Add a title when posting an image | Post is added and a title is displayed under the post with an optional caption | Works as expected |
+| Add Post | Navigate to the “Add Post” page . Add a caption when posting an image | Post is added and a caption is displayed under the post with an optional post section underneath | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="docs/testing/user-stories-testing/.png">
+  <img src="docs/testing/user-story-testing-08-01.png">
+  <img src="docs/testing/user-story-testing-08-02.png">
 </details>
 <br>
 <hr>
@@ -300,7 +304,9 @@ The API for this Front-End application was built with the Django REST Framework.
 | Home | Navigate to the “Home” page | See a feed of all posts on the site | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="docs/testing/user-stories-testing/.png">
+  <img src="docs/testing/user-story-testing-09-01.png">
+  <img src="docs/testing/user-story-testing-09-02.png">
+  <img src="docs/testing/user-story-testing-09-03.png">
 </details>
 <br>
 <hr>
@@ -313,7 +319,8 @@ The API for this Front-End application was built with the Django REST Framework.
 | Post Page | Click on any post from the home page, feed or a users profile page | See all post details below the image and a comments section | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="docs/testing/user-stories-testing/.png">
+  <img src="docs/testing/user-story-testing-10-01.png">
+  <img src="docs/testing/user-story-testing-10-02.png">
 </details>
 <br>
 <hr>
@@ -323,7 +330,7 @@ The API for this Front-End application was built with the Django REST Framework.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Likes | Click the like icon under any post | Post is liked and like icon is marked black | Works as expected |
+| Likes | Click the like icon under any post | Post is liked and like icon is marked red | Works as expected |
 
 <details><summary>Screenshot</summary>
 <img src="docs/testing/user-stories-testing/.png">
