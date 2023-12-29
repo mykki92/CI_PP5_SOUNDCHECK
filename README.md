@@ -1,3 +1,5 @@
+# <img src="src/assets/soundcheck-logo-light.png">
+
 **Developer: Michael Roberts**
 
 💻 [Visit live website](https://soundcheck-13ffdc050395.herokuapp.com/)
@@ -107,6 +109,8 @@ The key functionality aspects:
 
 ## Design
 ### Colours
+It was my intention to keep the colours simple in order to draw the users attention to the photographs and content posted on the site without distraction. I have used a simple white background with black text. Buttons are black with white text and turn grey when hovered over. The likes feature uses a dark red for the heart once the post is liked.      
+These colours were used throughout the pages to ensure consistent contrast and good user experience.
 
 ### Fonts
 
