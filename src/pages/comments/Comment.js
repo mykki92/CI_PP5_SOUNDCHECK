@@ -7,6 +7,7 @@ import styles from "../../styles/Comment.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { axiosRes } from "../../api/axiosDefaults";
 import CommentEditForm from "./CommentEditForm";
+import FeedbackMessage from "../../components/FeedbackMessage";
 
 const Comment = (props) => {
   const {
@@ -25,27 +26,41 @@ const Comment = (props) => {
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
 
-  const handleDelete = async () => {
-    try {
-      await axiosRes.delete(`/comments/${id}/`);
-      setPost((prevPost) => ({
-        results: [
-          {
-            ...prevPost.results[0],
-            comments_count: prevPost.results[0].comments_count - 1,
-          },
-        ],
-      }));
+  const [showAlert] = useState(false);
+  const [isDeleted, setIsDeleted] = useState(false);
 
-      setComments((prevComments) => ({
-        ...prevComments,
-        results: prevComments.results.filter((comment) => comment.id !== id),
-      }));
-    } catch (err) {}
+  const handleDelete = async () => {
+    setIsDeleted(true);
+
+    setTimeout(async () => {
+      try {
+        await axiosRes.delete(`/comments/${id}/`);
+        setPost((prevPost) => ({
+          results: [
+            {
+              ...prevPost.results[0],
+              comments_number: prevPost.results[0].comments_number - 1,
+            },
+          ],
+        }));
+
+        setComments((prevComments) => ({
+          ...prevComments,
+          results: prevComments.results.filter((comment) => comment.id !== id),
+        }));
+      } catch (err) {
+        //console.log(err)
+      }
+    }, 2500);
   }; 
 
-  return (
-    <>
+  return isDeleted ? (
+    <FeedbackMessage variant="info" message="Comment has been deleted" />
+  ) : (
+    <div>
+      {showAlert && (
+        <FeedbackMessage variant="info" message="Comment has been updated" />
+      )}
       <hr />
       <Media>
         <Link to={`/profiles/${profile_id}`}>
@@ -74,7 +89,7 @@ const Comment = (props) => {
           />
         )}
       </Media>
-    </>
+    </div>
   );
 };
 
