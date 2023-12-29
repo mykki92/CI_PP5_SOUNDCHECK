@@ -17,6 +17,7 @@ import {
 
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
+import FeedbackMessage from "../../components/FeedbackMessage";
 
 const ProfileEditForm = () => {
   const currentUser = useCurrentUser();
@@ -33,6 +34,8 @@ const ProfileEditForm = () => {
   const { name, content, image } = profileData;
 
   const [errors, setErrors] = useState({});
+
+  const [showAlert, setShowAlert] = useState(false);
 
   useEffect(() => {
     const handleMount = async () => {
@@ -76,9 +79,11 @@ const ProfileEditForm = () => {
         ...currentUser,
         profile_image: data.image,
       }));
-      history.goBack();
+      setShowAlert(true);
+      setTimeout(function () {
+        history.goBack();
+      }, 2500);
     } catch (err) {
-      // console.log(err);
       setErrors(err.response?.data);
     }
   };
@@ -86,6 +91,12 @@ const ProfileEditForm = () => {
   const textFields = (
     <>
       <Form.Group>
+        {showAlert && (
+          <FeedbackMessage
+            variant="info"
+            message="Your profile has been updated!"
+          />
+        )}
         <Form.Label>Bio</Form.Label>
         <Form.Control
           as="textarea"
