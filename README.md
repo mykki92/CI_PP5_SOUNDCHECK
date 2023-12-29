@@ -106,6 +106,11 @@ The key functionality aspects:
 
 
 ## Design
+### Colours
+
+### Fonts
+
+### Wireframes
 
 
 ## Technologies Used
@@ -593,3 +598,39 @@ Testing has been carried out on the following browsers:
 - Firefox
 - Microsoft Edge
 - Safari
+
+
+## Bugs
+| **Bug** | **Fix** |
+| ------- | ------- |
+| Upload and No Results icons are displaying too large | Resize original images and reupload |
+
+
+## Config
+### Forking the GitHub Repository
+1. Go to the GitHub repository
+2. Click on Fork button in top right corner
+3. You will then have a copy of the repository in your own GitHub account.
+   
+### Making a Local Clone
+1. Go to the GitHub repository 
+2. Locate the Code button above the list of files and click it
+3. Highlight the "HTTPS" button to clone with HTTPS and copy the link
+4. Open commandline interface on your computer
+5. Change the current working directory to the one where you want the cloned directory
+6. Type git clone and paste the URL from the clipboard 
+  ```
+  $ git clone https://github.com/mykki92/CI_PP5_SOUNDCHECK.git
+  ```
+7. Press Enter to create your local clone
+
+
+## Credits
+### Images
+
+
+### Code
+This project was inspired by the ['Moments'](https://github.com/Code-Institute-Solutions/moments) social media platform project by Code Institute. I have built my own styles and added extra functionality, 
+
+
+### Acknowledgements
