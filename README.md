@@ -2,7 +2,7 @@
 
 💻 [Visit live website](https://soundcheck-13ffdc050395.herokuapp.com/)
 
-![Am-I-Responsive]()
+![Am-I-Responsive](docs/readme/am-i-responsive-soundcheck.png)
 
 ## Table of Contents
   - [About](#about)
