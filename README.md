@@ -158,7 +158,6 @@ The API for this Front-End application was built with the Django REST Framework.
 
 
 ## Testing
- 
 ### Manual testing of user stories
 
 1. As a user, I can view the landing page so that I can understand the purpose of the website..
@@ -581,3 +580,16 @@ The API for this Front-End application was built with the Django REST Framework.
 <br>
 <hr>
 <br>
+
+### Device testing
+The website was tested on the following devices:
+- Google Pixel 7
+- Apple iMac
+- HP 14 Laptop
+
+### Browser testing
+Testing has been carried out on the following browsers:
+- Google Chrome
+- Firefox
+- Microsoft Edge
+- Safari
