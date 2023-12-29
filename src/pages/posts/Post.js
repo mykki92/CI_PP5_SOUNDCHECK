@@ -141,12 +141,10 @@ const ProfilePost = (props) => {
   } = props;
 
   return (
-    <Card className={styles.Post}>
-      <Card.Body>
+    <Card>
         <Link to={`/posts/${id}`}>
-            <Card.Img src={image} alt={title} />
-        </Link>
-      </Card.Body>
+            <Card.Img className={styles.ProfilePost} src={image} alt={title} />
+        </Link> 
     </Card>
   );
 }
