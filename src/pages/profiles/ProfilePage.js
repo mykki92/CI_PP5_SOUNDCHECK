@@ -114,11 +114,16 @@ function ProfilePage() {
     <>
       <hr />
       {profilePosts.results.length ? (
-        <div className={styles.GridContainer}>
-          {profilePosts.results.map((post) => (
-            <ProfilePost key={post.id} {...post} setPosts={setProfilePosts} />
-          ))}
-        </div>
+          <InfiniteScroll
+            children={profilePosts.results.map((post) => (
+                <ProfilePost key={post.id} {...post} setPosts={setProfilePosts} />
+            ))}
+            className={styles.GridContainer}
+            dataLength={profilePosts.results.length}
+            loader={<Asset spinner />}
+            hasMore={!!profilePosts.next}
+            next={() => fetchMoreData(profilePosts, setProfilePosts)}
+          />
       ) : (
         <Asset
           src={NoResults}
