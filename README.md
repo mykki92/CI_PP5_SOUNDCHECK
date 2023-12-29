@@ -333,7 +333,7 @@ The API for this Front-End application was built with the Django REST Framework.
 | Likes | Click the like icon under any post | Post is liked and like icon is marked red | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="docs/testing/user-stories-testing/.png">
+  <img src="docs/testing/user-story-testing-11.png">
 </details>
 <br>
 <hr>
@@ -346,7 +346,8 @@ The API for this Front-End application was built with the Django REST Framework.
 | Comments | Click the text box under the expanded post view and enter a comment | Comment is added to the comments list | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="docs/testing/user-stories-testing/.png">
+  <img src="docs/testing/user-story-testing-12-01.png">
+  <img src="docs/testing/user-story-testing-12-02.png">
 </details>
 <br>
 <hr>
@@ -359,7 +360,7 @@ The API for this Front-End application was built with the Django REST Framework.
 | Comments | Scroll down to the comment section under any post | All comments have a time stamp to the right of the comment | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="docs/testing/user-stories-testing/.png">
+  <img src="docs/testing/user-story-testing-13.png">
 </details>
 <br>
 <hr>
@@ -372,7 +373,9 @@ The API for this Front-End application was built with the Django REST Framework.
 | Comments | Click on the dropdown icon to the right of your comment and select the edit icon | Comment can be edited and reposted | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="docs/testing/user-stories-testing/.png">
+  <img src="docs/testing/user-story-testing-14-01.png">
+  <img src="docs/testing/user-story-testing-14-02.png">
+  <img src="docs/testing/user-story-testing-14-03.png">
 </details>
 <br>
 <hr>
@@ -386,7 +389,8 @@ The API for this Front-End application was built with the Django REST Framework.
 | Comments | Click on the dropdown icon to the right of your comment and select the delete icon | Comment will be removed from the comments list | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="docs/testing/user-stories-testing/.png">
+  <img src="docs/testing/user-story-testing-15-01.png">
+  <img src="docs/testing/user-story-testing-15-02.png">
 </details>
 <br>
 <hr>
@@ -399,7 +403,9 @@ The API for this Front-End application was built with the Django REST Framework.
 | Post Update | Click on the dropdown icon to the right of your post and select the edit icon | Image, title and caption can all be edited and reposted | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="docs/testing/user-stories-testing/.png">
+  <img src="docs/testing/user-story-testing-16-01.png">
+  <img src="docs/testing/user-story-testing-16-02.png">
+  <img src="docs/testing/user-story-testing-16-03.png">
 </details>
 <br>
 <hr>
@@ -412,7 +418,7 @@ The API for this Front-End application was built with the Django REST Framework.
 | | Navigate to the home, feed or liked page | Posts are displayed with a date stamp with most recent posts at the top of the list | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="docs/testing/user-stories-testing/.png">
+  <img src="docs/testing/user-story-testing-17.png">
 </details>
 <br>
 <hr>
@@ -438,7 +444,8 @@ The API for this Front-End application was built with the Django REST Framework.
 | Likes | Click the “Liked” button on the nav bar  | A list is displayed of all posts that you have previously liked | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="docs/testing/user-stories-testing/.png">
+  <img src="docs/testing/user-story-testing-19-01.png">
+  <img src="docs/testing/user-story-testing-19-02.png">
 </details>
 <br>
 <hr>
@@ -451,7 +458,9 @@ The API for this Front-End application was built with the Django REST Framework.
 | Follow/Unfollow | Click the “Feed” button on the nav bar  | A list is displayed of all posts by profiles that you have followed | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="docs/testing/user-stories-testing/.png">
+  <img src="docs/testing/user-story-testing-20-01.png">
+  <img src="docs/testing/user-story-testing-20-02.png">
+  <img src="docs/testing/user-story-testing-20-03.png">
 </details>
 <br>
 <hr>
@@ -464,7 +473,7 @@ The API for this Front-End application was built with the Django REST Framework.
 | Search Bar | Select the search bar at the top of the home, feed or liked pages and enter a keyword  | A list is displayed of all posts with the keyword in the title | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="docs/testing/user-stories-testing/.png">
+  <img src="docs/testing/user-story-testing-21.png">
 </details>
 <br>
 <hr>
