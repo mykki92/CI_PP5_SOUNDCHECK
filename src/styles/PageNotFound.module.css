@@ -1,0 +1,15 @@
+.Image {
+    padding-top: 40px;
+    height: 200px;
+    width: 200px;
+}
+
+.HomeButton {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+}
+
+.HomeButton:hover {
+    background-color: #242a3d;
+}
