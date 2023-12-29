@@ -5,18 +5,17 @@
     margin-bottom: 1rem;
     border: 1px solid transparent;
     border-radius: 0.25rem;
-    font-weight: bold;
   }
   
   .info {
-    background-color: #cff4fc;
-    border-color: #b6effb;
+    background-color: #000000;
+    color: #ffffff;
   }
   
   /* The close X button */
   .closebtn {
     margin-left: 15px;
-    color: var(--dark-slate-grey);
+    color: #ffffff;
     font-weight: bold;
     float: right;
     font-size: 22px;
@@ -26,7 +25,7 @@
   }
   
   .closebtn:hover {
-    color: var(--salmon);
+    color: #c1c1c5;
   }
   
   .hide {
