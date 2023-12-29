@@ -1,9 +1,9 @@
-import styles from "../styles/FeedbackMsg.module.css";
+import styles from "../styles/FeedbackMessage.module.css";
 import css from "classnames";
 import React from "react";
 import { useState } from "react";
 
-export default function FeedbackMsg({ variant, message }) {
+export default function FeedbackMessage({ variant, message }) {
   const [isShown, setIsShown] = useState(true);
 
   /*
