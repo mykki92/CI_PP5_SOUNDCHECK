@@ -124,13 +124,13 @@ The key functionality aspects:
 <img src="docs/wireframes/wireframe-home-feed-liked.png">
 </details>
 <details><summary>Add Post</summary>
-<img src="docs/wireframes/wireframe-.png">
+<img src="docs/wireframes/wireframe-add-post.png">
 </details>
 <details><summary>Post</summary>
-<img src="docs/wireframes/wireframe-.png">
+<img src="docs/wireframes/wireframe-post.png">
 </details>
 <details><summary>Profile</summary>
-<img src="docs/wireframes/wireframe-.png">
+<img src="docs/wireframes/wireframe-profile.png">
 </details>
 
 ## Technologies Used
