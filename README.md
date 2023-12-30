@@ -450,53 +450,45 @@ Potential future improvements to this project:
 The W3C Markup Validation Service was used to validate the HTML of the website. No errors were identified. 
 
 <details><summary></summary> 
-<img src="docs/validation/.png"> 
-</details> 
-<details><summary></summary> 
-<img src="docs/validation/.png"> 
+  <img src="docs/validation/.png"> 
+  <img src="docs/validation/.png"> 
 </details>
 
 ### CSS
 The W3C Jigsaw CSS Validation Service was used to validate the CSS of the website. All CSS modules pass the validation with no errors.
 
-<details><summary></summary> 
-<img src="docs/validation/.png"> 
-</details> 
-<details><summary></summary> 
-<img src="docs/validation/.png"> 
+<details><summary>Screenshots</summary> 
+  <img src="docs/validation/.png"> 
+  <img src="docs/validation/.png"> 
 </details>
 
 ### JSX
-The JSX code was validated using the ESLint utility.
-
-<details><summary>Eslint validation for components</summary> 
-<img src="docs/validation/eslint-components.png"> 
-</details> 
-<details><summary>Eslint validation for contexts</summary> 
-<img src="docs/validation/eslint-contexts.png"> 
-</details>
+The JSX code was validated using the ESLint utility. All files passed with no issues.
 
 ### Chrome Dev Tools Lighthouse 
 Lighthouse was used to test the performance, accessibility, best practice and SEO of the site. The validation was done for both desktop & mobile.  
 
 #### Desktop 
-<details><summary></summary> 
-<img src="docs/validation/lighthouse-.png "> 
+<details><summary>Screenshots</summary> 
+  <img src="docs/validation/lighthouse-.png ">
+  <img src="docs/validation/lighthouse-.png "> 
 </details>
 
 #### Mobile 
-<details><summary></summary> 
-<img src="docs/validation/lighthouse-.png "> 
+<details><summary>Screenshots</summary> 
+  <img src="docs/validation/lighthouse-.png "> 
+  <img src="docs/validation/lighthouse-.png ">
 </details>
 
 ### Wave
-The WAVE WebAIM web accessibility evaluation tool was used to test the websites accessibility.
+The WAVE WebAIM web accessibility evaluation tool was used to test the websites accessibility. I encountered a problem on the site where every page I was inputting into the tool was seemingly being assessed as the landing page and not the url extension specified. I have attached screenshots as I was unable to solve this issue and get successful WAVE tests. 
 
-<details><summary></summary>
-<img src="docs/validation/wave-.png">
-</details>
-<details><summary></summary>
-<img src="docs/validation/wave-p.png">
+<details><summary>Screenshots</summary>
+  <img src="docs/validation/wave-validation-landing-page.png">
+  <img src="docs/validation/wave-validation-signup.png">
+  <img src="docs/validation/wave-validation-signin.png">
+  <img src="docs/validation/wave-validation-profile.png">
+  <img src="docs/validation/wave-validation-post-create.png">
 </details>
 
 
