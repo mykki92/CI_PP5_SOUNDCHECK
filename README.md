@@ -668,6 +668,7 @@ Testing has been carried out on the following browsers:
 | **Bug** | **Fix** |
 | ------- | ------- |
 | Upload and No Results icons are displaying too large | Resize original images and reupload |
+| Infinite scroll is not displaying in grid format on the profile page | Put the grid format as part of the infinite scroll elements properties rather than its parent div container |
 
 
 ## Config
@@ -691,10 +692,14 @@ Testing has been carried out on the following browsers:
 
 ## Credits
 ### Images
-
+- 404, No Results and Upload icons were sourced from [Flaticon.com] (https://www.flaticon.com/)
+- Landing page images were sourced from [Pexels.com] (https://www.pexels.com/)
+- Sign Up/Sign In page image is owned by myself
+- Logo was generated at [Logo.com] (https://logo.com/)
 
 ### Code
 This project was inspired by the ['Moments'](https://github.com/Code-Institute-Solutions/moments) social media platform project by Code Institute. I have built my own styles and added extra functionality, 
 
-
 ### Acknowledgements
+My Code Institute Mentor Mo Shami for his guidance and advice.
+Code Institute learning modules and tutor support.
