@@ -431,7 +431,11 @@ The API for this Front-End application was built with the Django REST Framework.
 | Infinite Scroll | Navigate to the home, feed, liked or profile page | Displays list of all available posts without changing pages. Displays a spinning icon if the posts have not been loaded | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="docs/testing/user-stories-testing/.png">
+  <img src="docs/testing/user-story-testing-18-01.png">
+  <img src="docs/testing/user-story-testing-18-02.png">
+  <img src="docs/testing/user-story-testing-18-03.png">
+  <img src="docs/testing/user-story-testing-18-04.png">
+  <img src="docs/testing/user-story-testing-18-05.png">
 </details>
 <br>
 <hr>

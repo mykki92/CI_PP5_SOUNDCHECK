@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 
-import Form from "react-bootstrap/Form";
+import { Button, Form } from "react-bootstrap";
 import { axiosRes } from "../../api/axiosDefaults";
 
 import styles from "../../styles/CommentCreateEditForm.module.css";
 
 function CommentEditForm(props) {
-  const { id, content, setShowEditForm, setComments } = props;
+  const { id, content, setShowEditForm, setComments, setShowAlert } = props;
 
   const [formContent, setFormContent] = useState(content);
 
@@ -14,8 +14,8 @@ function CommentEditForm(props) {
     setFormContent(event.target.value);
   };
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     try {
       await axiosRes.put(`/comments/${id}/`, {
         content: formContent.trim(),
@@ -27,14 +27,15 @@ function CommentEditForm(props) {
             ? {
                 ...comment,
                 content: formContent.trim(),
-                updated_at: "now",
+                updated_on: "now",
               }
             : comment;
         }),
       }));
       setShowEditForm(false);
+      setShowAlert(true);
     } catch (err) {
-      // console.log(err);
+      //console.log(err)
     }
   };
 
@@ -50,20 +51,25 @@ function CommentEditForm(props) {
         />
       </Form.Group>
       <div className="text-right">
-        <button
+      <Button
           className={styles.Button}
-          onClick={() => setShowEditForm(false)}
+          onClick={() => {
+            setShowEditForm(false);
+            setShowAlert(false);
+          }}
+          onMouseDown={(e) => e.preventDefault()}
           type="button"
         >
           cancel
-        </button>
-        <button
+        </Button>
+        <Button
           className={styles.Button}
           disabled={!content.trim()}
+          onMouseDown={(e) => e.preventDefault()}
           type="submit"
         >
           save
-        </button>
+        </Button>
       </div>
     </Form>
   );

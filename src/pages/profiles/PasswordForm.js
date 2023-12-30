@@ -62,7 +62,7 @@ const PasswordForm = () => {
         {showAlert && (
           <FeedbackMessage
             variant="info"
-            message="Password has been changed. Taking you back to your profile's page..."
+            message="Password has been changed."
           />
         )}
         <Container className={appStyles.Content}>

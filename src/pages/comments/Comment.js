@@ -26,7 +26,7 @@ const Comment = (props) => {
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
 
-  const [showAlert] = useState(false);
+  const [showAlert, setShowAlert] = useState(false);
   const [isDeleted, setIsDeleted] = useState(false);
 
   const handleDelete = async () => {
@@ -77,6 +77,7 @@ const Comment = (props) => {
             profileImage={profile_image}
             setComments={setComments}
             setShowEditForm={setShowEditForm}
+            setShowAlert={setShowAlert}
           />
         ) : (
           <p>{content}</p>
