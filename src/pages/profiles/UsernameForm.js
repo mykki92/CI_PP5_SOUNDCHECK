@@ -27,6 +27,9 @@ const UsernameForm = () => {
   const currentUser = useCurrentUser();
   const setCurrentUser = useSetCurrentUser();
 
+  /*
+    Handles username change
+  */
   useEffect(() => {
     if (currentUser?.profile_id?.toString() === id) {
       setUsername(currentUser.username);
@@ -35,6 +38,11 @@ const UsernameForm = () => {
     }
   }, [currentUser, history, id]);
 
+  /* 
+    Handles new username submission
+    Displays feedback message on successful username change
+    Redirects the user to the profile page
+  */
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {

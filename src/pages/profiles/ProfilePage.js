@@ -37,6 +37,10 @@ function ProfilePage() {
   const [profile] = pageProfile.results;
   const is_owner = currentUser?.username === profile?.owner;
 
+  /*
+    Makes an API request to fetch user profile and their posts
+    Updates profile page data
+  */
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -58,6 +62,9 @@ function ProfilePage() {
     fetchData();
   }, [id, setProfileData]);
 
+  /*
+    Displays the profile avatar and information
+  */
   const mainProfile = (
     <>
       {profile?.is_owner && <ProfileEditDropdown id={profile?.id} />}
@@ -86,6 +93,7 @@ function ProfilePage() {
             </Col>
           </Row>
         </Col>
+        {/* displays follow/unfollow button */}
         <Col lg={3} className="text-lg-right">
           {currentUser &&
             !is_owner &&
@@ -110,10 +118,14 @@ function ProfilePage() {
     </>
   );
 
+  /*
+    Displays all posts by profile in a grid layout
+  */
   const mainProfilePosts = (
     <>
       <hr />
       {profilePosts.results.length ? (
+          // InfiniteScroll component handles loading content continually without pagination
           <InfiniteScroll
             children={profilePosts.results.map((post) => (
                 <ProfilePost key={post.id} {...post} setPosts={setProfilePosts} />

@@ -37,6 +37,10 @@ const ProfileEditForm = () => {
 
   const [showAlert, setShowAlert] = useState(false);
 
+  /*
+    Handles profile editing
+    Makes a request to the API by profile id
+  */
   useEffect(() => {
     const handleMount = async () => {
       if (currentUser?.profile_id?.toString() === id) {
@@ -56,6 +60,9 @@ const ProfileEditForm = () => {
     handleMount();
   }, [currentUser, history, id]);
 
+  /* 
+    Handles changes to the input fields
+  */
   const handleChange = (event) => {
     setProfileData({
       ...profileData,
@@ -63,6 +70,11 @@ const ProfileEditForm = () => {
     });
   };
 
+  /* 
+    Handles profile edit submission
+    Displays feedback message on successful submission
+    Redirects user to the profile page
+  */
   const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData();

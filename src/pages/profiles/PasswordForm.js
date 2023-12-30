@@ -29,6 +29,9 @@ const PasswordForm = () => {
   const [errors, setErrors] = useState({});
   const [showAlert, setShowAlert] = useState(false);
 
+  /* 
+    Handles changes to the input fields
+  */
   const handleChange = (event) => {
     setUserData({
       ...userData,
@@ -36,6 +39,9 @@ const PasswordForm = () => {
     });
   };
 
+  /*
+    Handles password change
+  */
   useEffect(() => {
     if (currentUser?.profile_id?.toString() !== id) {
       // redirect user if they are not the owner of this profile
@@ -43,6 +49,11 @@ const PasswordForm = () => {
     }
   }, [currentUser, history, id]);
 
+  /* 
+    Handles new password submission
+    Displays feedback message on successful password change
+    Redirects the user to the profile page
+  */
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
