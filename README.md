@@ -546,14 +546,12 @@ Lighthouse was used to test the performance, accessibility, best practice and SE
 
 #### Desktop 
 <details><summary>Screenshots</summary> 
-  <img src="docs/validation/lighthouse-.png ">
-  <img src="docs/validation/lighthouse-.png "> 
+  <img src="docs/validation/lighthouse-validation-desktop.png ">
 </details>
 
 #### Mobile 
 <details><summary>Screenshots</summary> 
-  <img src="docs/validation/lighthouse-.png "> 
-  <img src="docs/validation/lighthouse-.png ">
+  <img src="docs/validation/lighthouse-validation-mobile.png "> 
 </details>
 
 ### Wave
