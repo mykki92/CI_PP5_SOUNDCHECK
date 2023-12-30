@@ -29,6 +29,11 @@ const Comment = (props) => {
   const [showAlert, setShowAlert] = useState(false);
   const [isDeleted, setIsDeleted] = useState(false);
 
+  /*
+    Handles deleting of the comment based on its id
+    Displays feedback message to confirm comment deleted
+    Decrements the number of comments by 1
+  */
   const handleDelete = async () => {
     setIsDeleted(true);
 
@@ -83,6 +88,7 @@ const Comment = (props) => {
           <p>{content}</p>
         )}
         </Media.Body>
+        {/* Displays dropdown menu with options to edit or delete comment */}
         {is_owner && !showEditForm && (
           <DropdownMenu
             handleEdit={() => setShowEditForm(true)}

@@ -10,10 +10,18 @@ function CommentEditForm(props) {
 
   const [formContent, setFormContent] = useState(content);
 
+  /* 
+    Handles changes to input fields
+  */
   const handleChange = (event) => {
     setFormContent(event.target.value);
   };
 
+  /* 
+    Handles the edit comment submission
+    Updates displayed comment with timestamp set to 'now'
+    Displays confirmation alert to the user 
+  */
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
