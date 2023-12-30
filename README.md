@@ -449,9 +449,38 @@ Potential future improvements to this project:
 ### HTML
 The W3C Markup Validation Service was used to validate the HTML of the website. No errors were identified. 
 
-<details><summary></summary> 
-  <img src="docs/validation/.png"> 
-  <img src="docs/validation/.png"> 
+<details><summary>Main Page</summary> 
+  <img src="docs/validation/html-validation-main-page.png">  
+</details>
+<details><summary>Sign Up</summary> 
+  <img src="docs/validation/html-validation-signup.png">  
+</details>
+<details><summary>Sign In</summary> 
+  <img src="docs/validation/html-validation-signin.png">  
+</details>
+<details><summary>Post</summary> 
+  <img src="docs/validation/html-validation-post.png">  
+</details>
+<details><summary>Post Create</summary> 
+  <img src="docs/validation/html-validation-post-create.png">  
+</details>
+<details><summary>Post Edit</summary> 
+  <img src="docs/validation/html-validation-post-edit.png">  
+</details>
+<details><summary>Profile</summary> 
+  <img src="docs/validation/html-validation-profile.png">  
+</details>
+<details><summary>Profile Edit</summary> 
+  <img src="docs/validation/html-validation-profile-edit.png">  
+</details>
+<details><summary>Change Username</summary> 
+  <img src="docs/validation/html-validation-change-username.png">  
+</details>
+<details><summary>Change Password</summary> 
+  <img src="docs/validation/html-validation-edit-password.png">  
+</details>
+<details><summary>404</summary> 
+  <img src="docs/validation/html-validation-404.png">  
 </details>
 
 ### CSS
