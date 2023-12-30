@@ -25,6 +25,10 @@ function PostPage() {
   const profile_image = currentUser?.profile_image;
   const [comments, setComments] = useState({ results: [] });
 
+  /*
+    Handles request for posts and their comments
+    Runs every time the post id in the url changes
+  */
   useEffect(() => {
     const handleMount = async () => {
       try {
@@ -59,6 +63,7 @@ function PostPage() {
             "Comments"
           ) : null}
           {comments.results.length ? (
+            // InfiniteScroll component handles loading content continually without pagination
             <InfiniteScroll
               children={comments.results.map((comment) => (
                 <Comment

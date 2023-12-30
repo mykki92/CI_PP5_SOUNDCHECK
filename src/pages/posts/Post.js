@@ -30,10 +30,18 @@ const Post = (props) => {
   const history = useHistory();
   const [showAlert, setShowAlert] = useState(false);
 
+  /*
+    Handles post editing
+  */
   const handleEdit = () => {
     history.push(`/posts/${id}/edit`);
   };
 
+  /*
+    Handles deleting posts
+    Shows confirmation message to the user
+    Redirects the user to the main page after a short delay
+  */
   const handleDelete = async () => {
     try {
       await axiosRes.delete(`/posts/${id}/`);
@@ -46,6 +54,11 @@ const Post = (props) => {
     }
   };
 
+  /*
+    Handles post likes
+    Sends a request to the API for a post by id
+    Increments the likes number by 1
+  */
   const handleLike = async () => {
     try {
       const { data } = await axiosRes.post("/likes/", { post: id });
@@ -62,6 +75,11 @@ const Post = (props) => {
     }
   };
 
+  /*
+    Handles post unliking
+    Sends a request to the API for a post by id
+    Decrements the likes number by 1
+  */
   const handleUnlike = async () => {
     try {
       await axiosRes.delete(`/likes/${like_id}/`);
@@ -89,6 +107,7 @@ const Post = (props) => {
             <Avatar src={profile_image} height={55} />
             {owner}
           </Link>
+          {/* Displays the dropdown menu with options to edit or delete post */}
           <div className="d-flex align-items-center">
             <span>{updated_at}</span>
             {is_owner && postPage && (

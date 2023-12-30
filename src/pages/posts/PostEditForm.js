@@ -29,6 +29,11 @@ function PostEditForm() {
   const history = useHistory();
   const { id } = useParams();
 
+  /*
+    Handles API request using the post id parameter
+    Gets data for the posts user wants to edit
+    Prevents editing other users posts
+  */
   useEffect(() => {
     const handleMount = async () => {
       try {
@@ -44,6 +49,9 @@ function PostEditForm() {
     handleMount();
   }, [history, id]);
 
+  /* 
+    Handles changes to the input fields
+  */
   const handleChange = (event) => {
     setPostData({
       ...postData,
@@ -51,6 +59,9 @@ function PostEditForm() {
     });
   };
 
+  /* 
+    Handles change to the image upload input field
+  */
   const handleChangeImage = (event) => {
     if (event.target.files.length) {
       URL.revokeObjectURL(image);
@@ -61,6 +72,10 @@ function PostEditForm() {
     }
   };
 
+  /* 
+    Handles edit post form submission
+    Redirects the user to the post page
+  */
   const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData();

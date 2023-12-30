@@ -34,6 +34,9 @@ function PostCreateForm() {
   const imageInput = useRef(null);
   const history = useHistory();
 
+  /* 
+    Handles changes to the input fields
+  */
   const handleChange = (event) => {
     setPostData({
       ...postData,
@@ -41,6 +44,9 @@ function PostCreateForm() {
     });
   };
 
+  /* 
+    Handles change to the image upload input field
+  */
   const handleChangeImage = (event) => {
     if (event.target.files.length) {
       URL.revokeObjectURL(image);
@@ -51,6 +57,9 @@ function PostCreateForm() {
     }
   };
 
+  /* 
+    Handles create post form submission
+  */
   const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData();
@@ -70,6 +79,9 @@ function PostCreateForm() {
     }
   };
 
+  /*
+    Input fields and buttons 
+  */
   const textFields = (
     <div className="text-center">
       <Form.Group>

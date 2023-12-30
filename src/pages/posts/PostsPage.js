@@ -28,6 +28,13 @@ function PostsPage({ message, filter = "" }) {
 
   const currentUser = useCurrentUser();
 
+  /*
+    Handles API request using the filters for each of pages
+    to fetch relevant posts to the filter
+    Displays all posts, posts by the profiles followed 
+    or liked posts
+    Shows a loading spinner when content is loading
+  */
   useEffect(() => {
     const fetchPosts = async () => {
       try {
@@ -38,8 +45,10 @@ function PostsPage({ message, filter = "" }) {
         // console.log(err);
       }
     };
-
     setHasLoaded(false);
+    /*
+      Delays making an API request while user is typing
+    */
     const timer = setTimeout(() => {
       fetchPosts();
     }, 1000);
@@ -70,6 +79,7 @@ function PostsPage({ message, filter = "" }) {
         {hasLoaded ? (
           <>
             {posts.results.length ? (
+              // InfiniteScroll component handles loading content continually without pagination
               <InfiniteScroll
                 children={posts.results.map((post) => (
                   <Post key={post.id} {...post} setPosts={setPosts} />
@@ -80,12 +90,14 @@ function PostsPage({ message, filter = "" }) {
                 next={() => fetchMoreData(posts, setPosts)}
               />
             ) : (
+              // if no results found, show no results asset and message
               <Container className={appStyles.Content}>
                 <Asset src={NoResults} message={message} />
               </Container>
             )}
           </>
         ) : (
+          // display a loading spinner while content is loading
           <Container className={appStyles.Content}>
             <Asset spinner />
           </Container>
