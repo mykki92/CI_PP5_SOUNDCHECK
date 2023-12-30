@@ -486,9 +486,56 @@ The W3C Markup Validation Service was used to validate the HTML of the website. 
 ### CSS
 The W3C Jigsaw CSS Validation Service was used to validate the CSS of the website. All CSS modules pass the validation with no errors.
 
-<details><summary>Screenshots</summary> 
-  <img src="docs/validation/.png"> 
-  <img src="docs/validation/.png"> 
+<details><summary>App.module.css</summary> 
+  <img src="docs/validation/css-validation-app.png"> 
+</details>
+<details><summary>Asset.module.css</summary> 
+  <img src="docs/validation/css-validation-asset.png"> 
+</details>
+<details><summary>Avatar.module.css</summary> 
+  <img src="docs/validation/css-validation-avatar.png"> 
+</details>
+<details><summary>Button.module.css</summary> 
+  <img src="docs/validation/css-validation-button.png"> 
+</details>
+<details><summary>Comment.module.css</summary> 
+  <img src="docs/validation/css-validation-comment.png"> 
+</details>
+<details><summary>CommentCreateEditForm.module.css</summary> 
+  <img src="docs/validation/css-validation-comment-create-edit.png"> 
+</details>
+<details><summary>DropdownMenu.module.css</summary> 
+  <img src="docs/validation/css-validation-dropdown.png"> 
+</details>
+<details><summary>FeedbackMessage.module.css</summary> 
+  <img src="docs/validation/css-validation-feedback.png"> 
+</details>
+<details><summary>LandingPage.module.css</summary> 
+  <img src="docs/validation/css-validation-landing-page.png"> 
+</details>
+<details><summary>NavBar.module.css</summary> 
+  <img src="docs/validation/css-validation-nav.png"> 
+</details>
+<details><summary>PageNotFound.module.css</summary> 
+  <img src="docs/validation/css-validation-page-not-found.png"> 
+</details>
+<details><summary>Post.module.css</summary> 
+  <img src="docs/validation/css-validation-post.png"> 
+</details>
+<details><summary>PostCreateEditForm.module.css</summary> 
+  <img src="docs/validation/css-validation-post-create-edit.png"> 
+</details>
+<details><summary>PostsPage.module.css</summary> 
+  <img src="docs/validation/css-validation-posts-page.png"> 
+</details>
+<details><summary>Profile.module.css</summary> 
+  <img src="docs/validation/css-validation-profile.png"> 
+</details>
+<details><summary>ProfilePage.module.css</summary> 
+  <img src="docs/validation/css-validation-profile-page.png"> 
+</details>
+<details><summary>SignInUpForm.module.css</summary> 
+  <img src="docs/validation/css-validation-signup-signin.png"> 
 </details>
 
 ### JSX
