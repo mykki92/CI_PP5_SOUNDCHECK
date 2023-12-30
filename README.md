@@ -417,8 +417,7 @@ The API for this Front-End application was built with the Django REST Framework.
   <img src="docs/features/feature-feedback-05.png">
 </details>
 
-
-## Future features / improvements
+## Future features/improvements
 Potential future improvements to this project:
 
 - Authentication
@@ -433,6 +432,8 @@ Potential future improvements to this project:
 - Posts
   - Show most liked posts in the app - similar to ‘Top Users’ menu
   - Allow users to upload videos in their posts
+  - Allow users to tag other users in their posts
+  - Allow users to repost or share other users posts to other sites
 
 - Comments
   - Option to reply to a selected comment and create a conversation
