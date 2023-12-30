@@ -113,6 +113,7 @@ It was my intention to keep the colours simple in order to draw the users attent
 These colours were used throughout the pages to ensure consistent contrast and good user experience.
 
 ### Fonts
+The Google Font family "Righteous" was used as I felt it was a clear and understandable font that wasn't overly formal and fitted the atmosphere of the site.
 
 ### Wireframes
 <details><summary>Landing Page</summary>
@@ -655,6 +656,7 @@ The website was tested on the following devices:
 - Google Pixel 7
 - Apple iMac
 - HP 14 Laptop
+- Samsung Galaxy Tab S5
 
 ### Browser testing
 Testing has been carried out on the following browsers:
