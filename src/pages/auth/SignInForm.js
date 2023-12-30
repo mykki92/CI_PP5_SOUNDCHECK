@@ -30,6 +30,11 @@ function SignInForm() {
   const [errors, setErrors] = useState({});
 
   const history = useHistory();
+
+  /* 
+    Handles sign in data submitted on the form
+    Redirects user to home page on sign in
+  */
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -42,6 +47,9 @@ function SignInForm() {
     }
   };
 
+  /* 
+    Handles changes to any of the input fields
+  */
   const handleChange = (event) => {
     setSignInData({
       ...signInData,
@@ -54,6 +62,7 @@ function SignInForm() {
       <Col className="my-auto p-0 p-md-2" md={6}>
         <Container className={`${appStyles.Content} p-4 `}>
           <h1 className={styles.Header}>sign in</h1>
+          {/* Sign in form with alert messages for input errors */}
           <Form onSubmit={handleSubmit}>
             <Form.Group controlId="username">
               <Form.Label className="d-none">Username</Form.Label>

@@ -30,6 +30,9 @@ const SignUpForm = () => {
 
   const history = useHistory();
 
+  /* 
+    Handles changes to any of the input fields
+  */
   const handleChange = (event) => {
     setSignUpData({
       ...signUpData,
@@ -37,6 +40,10 @@ const SignUpForm = () => {
     });
   };
 
+  /* 
+    Handles sign up data submitted on the form
+    Redirects user to sign in page on sign up
+  */
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
@@ -52,7 +59,7 @@ const SignUpForm = () => {
       <Col className="my-auto py-2 p-md-2" md={6}>
         <Container className={`${appStyles.Content} p-4 `}>
           <h1 className={styles.Header}>sign up</h1>
-
+          {/* Sign up form with alert messages for input errors */}
           <Form onSubmit={handleSubmit}>
             <Form.Group controlId="username">
               <Form.Label className="d-none">username</Form.Label>
