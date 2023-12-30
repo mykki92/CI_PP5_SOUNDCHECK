@@ -274,7 +274,7 @@ The API for this Front-End application was built with the Django REST Framework.
 |-------------|------------|---------------------|-------------------|
 | Add Post | Click the ‘Add post’ icon to the left of the navbar | A form page is displayed where you can upload an image and give it a title and caption. Once posted it will appear in the main posts page and on your profile page | Works as expected |
 
-<details><summary>Screenshot</summary>
+<details><summary>Screenshots</summary>
   <img src="docs/testing/user-story-testing-07-01.png">
   <img src="docs/testing/user-story-testing-07-02.png">
   <img src="docs/testing/user-story-testing-07-03.png">
@@ -289,7 +289,7 @@ The API for this Front-End application was built with the Django REST Framework.
 |-------------|------------|---------------------|-------------------|
 | Add Post | Navigate to the “Add Post” page . Add a caption when posting an image | Post is added and a caption is displayed under the post with an optional post section underneath | Works as expected |
 
-<details><summary>Screenshot</summary>
+<details><summary>Screenshots</summary>
   <img src="docs/testing/user-story-testing-08-01.png">
   <img src="docs/testing/user-story-testing-08-02.png">
 </details>
@@ -303,7 +303,7 @@ The API for this Front-End application was built with the Django REST Framework.
 |-------------|------------|---------------------|-------------------|
 | Home | Navigate to the “Home” page | See a feed of all posts on the site | Works as expected |
 
-<details><summary>Screenshot</summary>
+<details><summary>Screenshots</summary>
   <img src="docs/testing/user-story-testing-09-01.png">
   <img src="docs/testing/user-story-testing-09-02.png">
   <img src="docs/testing/user-story-testing-09-03.png">
@@ -318,7 +318,7 @@ The API for this Front-End application was built with the Django REST Framework.
 |-------------|------------|---------------------|-------------------|
 | Post Page | Click on any post from the home page, feed or a users profile page | See all post details below the image and a comments section | Works as expected |
 
-<details><summary>Screenshot</summary>
+<details><summary>Screenshots</summary>
   <img src="docs/testing/user-story-testing-10-01.png">
   <img src="docs/testing/user-story-testing-10-02.png">
 </details>
@@ -332,7 +332,7 @@ The API for this Front-End application was built with the Django REST Framework.
 |-------------|------------|---------------------|-------------------|
 | Likes | Click the like icon under any post | Post is liked and like icon is marked red | Works as expected |
 
-<details><summary>Screenshot</summary>
+<details><summary>Screenshots</summary>
   <img src="docs/testing/user-story-testing-11.png">
 </details>
 <br>
@@ -345,7 +345,7 @@ The API for this Front-End application was built with the Django REST Framework.
 |------------|------------|---------------------|-------------------|
 | Comments | Click the text box under the expanded post view and enter a comment | Comment is added to the comments list | Works as expected |
 
-<details><summary>Screenshot</summary>
+<details><summary>Screenshots</summary>
   <img src="docs/testing/user-story-testing-12-01.png">
   <img src="docs/testing/user-story-testing-12-02.png">
 </details>
@@ -359,7 +359,7 @@ The API for this Front-End application was built with the Django REST Framework.
 |------------|------------|---------------------|-------------------|
 | Comments | Scroll down to the comment section under any post | All comments have a time stamp to the right of the comment | Works as expected |
 
-<details><summary>Screenshot</summary>
+<details><summary>Screenshots</summary>
   <img src="docs/testing/user-story-testing-13.png">
 </details>
 <br>
@@ -372,7 +372,7 @@ The API for this Front-End application was built with the Django REST Framework.
 |------------|------------|---------------------|-------------------|
 | Comments | Click on the dropdown icon to the right of your comment and select the edit icon | Comment can be edited and reposted | Works as expected |
 
-<details><summary>Screenshot</summary>
+<details><summary>Screenshots</summary>
   <img src="docs/testing/user-story-testing-14-01.png">
   <img src="docs/testing/user-story-testing-14-02.png">
   <img src="docs/testing/user-story-testing-14-03.png">
@@ -388,7 +388,7 @@ The API for this Front-End application was built with the Django REST Framework.
 |------------|------------|---------------------|-------------------|
 | Comments | Click on the dropdown icon to the right of your comment and select the delete icon | Comment will be removed from the comments list | Works as expected |
 
-<details><summary>Screenshot</summary>
+<details><summary>Screenshots</summary>
   <img src="docs/testing/user-story-testing-15-01.png">
   <img src="docs/testing/user-story-testing-15-02.png">
 </details>
@@ -402,7 +402,7 @@ The API for this Front-End application was built with the Django REST Framework.
 |------------|------------|---------------------|-------------------|
 | Post Update | Click on the dropdown icon to the right of your post and select the edit icon | Image, title and caption can all be edited and reposted | Works as expected |
 
-<details><summary>Screenshot</summary>
+<details><summary>Screenshots</summary>
   <img src="docs/testing/user-story-testing-16-01.png">
   <img src="docs/testing/user-story-testing-16-02.png">
   <img src="docs/testing/user-story-testing-16-03.png">
@@ -417,7 +417,7 @@ The API for this Front-End application was built with the Django REST Framework.
 |------------|------------|---------------------|-------------------|
 | | Navigate to the home, feed or liked page | Posts are displayed with a date stamp with most recent posts at the top of the list | Works as expected |
 
-<details><summary>Screenshot</summary>
+<details><summary>Screenshots</summary>
   <img src="docs/testing/user-story-testing-17.png">
 </details>
 <br>
@@ -430,7 +430,7 @@ The API for this Front-End application was built with the Django REST Framework.
 |------------|------------|---------------------|-------------------|
 | Infinite Scroll | Navigate to the home, feed, liked or profile page | Displays list of all available posts without changing pages. Displays a spinning icon if the posts have not been loaded | Works as expected |
 
-<details><summary>Screenshot</summary>
+<details><summary>Screenshots</summary>
   <img src="docs/testing/user-story-testing-18-01.png">
   <img src="docs/testing/user-story-testing-18-02.png">
   <img src="docs/testing/user-story-testing-18-03.png">
@@ -447,7 +447,7 @@ The API for this Front-End application was built with the Django REST Framework.
 |------------|------------|---------------------|-------------------|
 | Likes | Click the “Liked” button on the nav bar  | A list is displayed of all posts that you have previously liked | Works as expected |
 
-<details><summary>Screenshot</summary>
+<details><summary>Screenshots</summary>
   <img src="docs/testing/user-story-testing-19-01.png">
   <img src="docs/testing/user-story-testing-19-02.png">
 </details>
@@ -461,7 +461,7 @@ The API for this Front-End application was built with the Django REST Framework.
 |------------|------------|---------------------|-------------------|
 | Follow/Unfollow | Click the “Feed” button on the nav bar  | A list is displayed of all posts by profiles that you have followed | Works as expected |
 
-<details><summary>Screenshot</summary>
+<details><summary>Screenshots</summary>
   <img src="docs/testing/user-story-testing-20-01.png">
   <img src="docs/testing/user-story-testing-20-02.png">
   <img src="docs/testing/user-story-testing-20-03.png">
@@ -476,7 +476,7 @@ The API for this Front-End application was built with the Django REST Framework.
 |------------|------------|---------------------|-------------------|
 | Search Bar | Select the search bar at the top of the home, feed or liked pages and enter a keyword  | A list is displayed of all posts with the keyword in the title | Works as expected |
 
-<details><summary>Screenshot</summary>
+<details><summary>Screenshots</summary>
   <img src="docs/testing/user-story-testing-21.png">
 </details>
 <br>
@@ -489,8 +489,11 @@ The API for this Front-End application was built with the Django REST Framework.
 |------------|------------|---------------------|-------------------|
 | Avatar | Upload profile avatar or keep default avatar  | Avatar is displayed on your profile page and alongside your username in posts and comments | Works as expected |
 
-<details><summary>Screenshot</summary>
-<img src="docs/testing/user-stories-testing/.png">
+<details><summary>Screenshots</summary>
+  <img src="docs/testing/user-story-testing-22-01.png">
+  <img src="docs/testing/user-story-testing-22-02.png">
+  <img src="docs/testing/user-story-testing-22-03.png">
+  <img src="docs/testing/user-story-testing-22-04.png">
 </details>
 <br>
 <hr>
@@ -502,8 +505,9 @@ The API for this Front-End application was built with the Django REST Framework.
 |------------|------------|---------------------|-------------------|
 | Avatar | Navigate to the home, feed or liked page, or any users profile page  | User avatars are displayed on their profile page and alongside their username in posts and comments | Works as expected |
 
-<details><summary>Screenshot</summary>
-<img src="docs/testing/user-stories-testing/.png">
+<details><summary>Screenshots</summary>
+  <img src="docs/testing/user-story-testing-23-01.png">
+  <img src="docs/testing/user-story-testing-23-02.png">
 </details>
 <br>
 <hr>
@@ -515,8 +519,11 @@ The API for this Front-End application was built with the Django REST Framework.
 |------------|------------|---------------------|-------------------|
 | Profile | Click the dropdown menu on the profile page, select the edit profile option and upload an image with a bio  | New avatar and bio displays on your profile page  | Works as expected |
 
-<details><summary>Screenshot</summary>
-<img src="docs/testing/user-stories-testing/].png">
+<details><summary>Screenshots</summary>
+  <img src="docs/testing/user-story-testing-24-01.png">
+  <img src="docs/testing/user-story-testing-24-02.png">
+  <img src="docs/testing/user-story-testing-24-03.png">
+  <img src="docs/testing/user-story-testing-24-04.png">
 </details>
 <br>
 <hr>
@@ -528,8 +535,9 @@ The API for this Front-End application was built with the Django REST Framework.
 |------------|------------|---------------------|-------------------|
 | Change Password | Click the dropdown menu on the profile page, select the change password option and enter a new password  | Your account can now only be accessed with your new sign in credentials | Works as expected |
 
-<details><summary>Screenshot</summary>
-<img src="docs/testing/user-stories-testing/.png">
+<details><summary>Screenshots</summary>
+  <img src="docs/testing/user-story-testing-25-01.png">
+  <img src="docs/testing/user-story-testing-25-02.png">
 </details>
 <br>
 <hr>
@@ -541,8 +549,8 @@ The API for this Front-End application was built with the Django REST Framework.
 |------------|------------|---------------------|-------------------|
 | Profile Page | Navigate to a users profile page by clicking their avatar or username  | A list of all their posts is displayed, most recent posts first | Works as expected |
 
-<details><summary>Screenshot</summary>
-<img src="docs/testing/user-stories-testing/.png">
+<details><summary>Screenshots</summary>
+  <img src="docs/testing/user-story-testing-26.png">
 </details>
 <br>
 <hr>
@@ -554,8 +562,8 @@ The API for this Front-End application was built with the Django REST Framework.
 |------------|------------|---------------------|-------------------|
 | Profile Page | Navigate to a users profile page by clicking their avatar or username  | Counters are displayed at the top of the page with number of posts, followers and users followed. A bio section is underneath | Works as expected |
 
-<details><summary>Screenshot</summary>
-<img src="docs/testing/user-stories-testing/.png">
+<details><summary>Screenshots</summary>
+  <img src="docs/testing/user-story-testing-27.png">
 </details>
 <br>
 <hr>
@@ -567,8 +575,11 @@ The API for this Front-End application was built with the Django REST Framework.
 |------------|------------|---------------------|-------------------|
 | Follow/Unfollow | Click on the 'follow' or ‘unfollow’ button within the user profile page or by the username in ‘Popular Profiles’' menu | Follows or unfollows the user, increases or decreases the 'following' number on current profile and increases or decreases the number of followers on followed user's profile | Works as expected |
 
-<details><summary>Screenshot</summary>
-<img src="docs/testing/user-stories-testing/.png">
+<details><summary>Screenshots</summary>
+  <img src="docs/testing/user-story-testing-28-01.png">
+  <img src="docs/testing/user-story-testing-28-02.png">
+  <img src="docs/testing/user-story-testing-28-03.png">
+  <img src="docs/testing/user-story-testing-28-04.png">
 </details>
 <br>
 <hr>
@@ -580,8 +591,8 @@ The API for this Front-End application was built with the Django REST Framework.
 |------------|------------|---------------------|-------------------|
 | Popular Profiles | Navigate to the home page | A box on the right of the page displays a list of the ten most popular profiles | Works as expected |
 
-<details><summary>Screenshot</summary>
-<img src="docs/testing/user-stories-testing/.png">
+<details><summary>Screenshots</summary>
+  <img src="docs/testing/user-story-testing-29.png">
 </details>
 <br>
 <hr>
@@ -593,8 +604,13 @@ The API for this Front-End application was built with the Django REST Framework.
 |------------|------------|---------------------|-------------------|
 | | Change device screen size using chrome dev tools | The web functionality remains the same on various screen sizes | Works as expected |
 
-<details><summary>Screenshot</summary>
-<img src="docs/testing/user-stories-testing/.png">
+<details><summary>Screenshots</summary>
+  <img src="docs/testing/user-story-testing-30-01.png">
+  <img src="docs/testing/user-story-testing-30-02.png">
+  <img src="docs/testing/user-story-testing-30-03.png">
+  <img src="docs/testing/user-story-testing-30-04.png">
+  <img src="docs/testing/user-story-testing-30-05.png">
+  <img src="docs/testing/user-story-testing-30-06.png">
 </details>
 <br>
 <hr>
@@ -606,8 +622,8 @@ The API for this Front-End application was built with the Django REST Framework.
 |------------|------------|---------------------|-------------------|
 | 404 Page | Enter an invalid url into the browser e.g. https://soundcheck-13ffdc050395.herokuapp.com/a | Reroutes to a customised 404 page | Works as expected |
 
-<details><summary>Screenshot</summary>
-<img src="docs/testing/user-stories-testing/">
+<details><summary>Screenshots</summary>
+  <img src="docs/testing/user-story-testing-31.png">
 </details>
 <br>
 <hr>
@@ -623,8 +639,12 @@ The API for this Front-End application was built with the Django REST Framework.
 | Feedback | In the profile page click on the dropdown menu and the key icon to change user password. Update the password and click 'Save' | Updates the password, displays the feedback message and redirects the user to their profile page after a short delay | Works as expected |
 | Feedback | Within the post page click on the dropdown menu and 'bin' icon to delete the post | Deletes the post, displays the feedback message and redirects the user to the main posts page | Works as expected |
 
-<details><summary>Screenshot</summary>
-<img src="docs/testing/user-stories-testing/.png">
+<details><summary>Screenshots</summary>
+  <img src="docs/testing/user-story-testing-32-01.png">
+  <img src="docs/testing/user-story-testing-32-02.png">
+  <img src="docs/testing/user-story-testing-32-03.png">
+  <img src="docs/testing/user-story-testing-32-04.png">
+  <img src="docs/testing/user-story-testing-32-05.png">
 </details>
 <br>
 <hr>
