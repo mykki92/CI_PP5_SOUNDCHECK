@@ -203,7 +203,7 @@ There were various components created and reused across this application.
 - `<FeedbackMessage />` - component for displaying feedback messages to the user upon editing/deleting comments, deleting post, updating profile information or a password.
 - User stories covered: 32
 
-- `<NavBar />` - reusable component that features on each page of the application. For signed in users it shows links to Home, Feed, Liked, Add Post, Profile, Sign Out and user avatar/picture. For signed out users, it displays links to sign up or sign in.
+- `<NavBar />` - reusable component that features on each page of the application. For signed in users it shows links to Home, Feed, Liked, Add Post, Profile and Sign Out. For signed out users, it displays links to sign up or sign in.
 - User stories covered: 2, 3
 
 - `<PageNotFound />` - component for displaying a 404 graphic error message with a return to menu button when a user enters an invalid URL.
@@ -220,6 +220,223 @@ The API for this Front-End application was built with the Django REST Framework.
 ##### Back to [top](#table-of-contents)
 
 ## Features
+### Landing Page
+- Users are directed to the landing page when they try to enter the site without being signed it.
+- Displays a brief introduction to the site, a carousel of images from the site and links to sign up for an account or sign in to the site.
+- User stories covered: 1
+
+<details><summary>Screenshots</summary>
+  <img src="docs/features/feature-landing-page.png">
+</details>
+
+### Navigation Bar
+- Featured at the top of all pages
+- Two variants of the navbar:
+  - Signed in users will see links to Home, Feed, Liked, Add Post, Profile and Sign Out
+  - Signed out users will see links to sign up or sign in
+- The nav bar is fully responsive and changes to a toggler (hamburger menu) on smaller size screens
+- User stories covered: 2, 3
+
+<details><summary>Screenshots</summary>
+  <img src="docs/features/feature-navbar-01.png">
+  <img src="docs/features/feature-navbar-02.png">
+</details>
+
+### Sign Up
+- New users can create an account
+- The user must provide a valid username,  password and password confirmation.
+- Passwords must meet certain criteria which will be flagged in a feedback message if the user inputs invalid information.
+- Users cannot register the same details twice for an account.
+- Once registered, the user is redirected to the login page to log in.
+- User stories covered: 4
+
+<details><summary>Screenshots</summary>
+  <img src="docs/features/feature-sign-up.png">
+</details>
+
+### Sign In
+- Returning users can login to their account
+- The user must have an account in the system and they must enter the correct username and password
+- Once logged in the user will be navigated to the home page
+- Warning message is displayed on incorrect input
+- User stories covered: 5
+
+<details><summary>Screenshots</summary>
+  <img src="docs/features/feature-sign-in.png">
+</details>
+
+### Home Page
+- Contains list of the most popular profiles on the app.
+- Contains a search bar above all posts.
+- Without any applied search filter displays posts added by all users.
+- Displays all posts ordered with the most recent at the top of the page.
+- User stories covered: 9, 17
+
+<details><summary>Screenshots</summary>
+  <img src="docs/features/feature-home-page-01.png">
+  <img src="docs/features/feature-home-page-02.png">
+  <img src="docs/features/feature-home-page-03.png">
+</details>
+
+### Add Post
+- Contains image, caption and post.
+- Post field is optional.
+- Allows users to share their pictures with others, will be displayed on their profile page, the home page and the feed of users that have followed them.
+- User stories covered: 7, 8, 16
+
+<details><summary>Screenshots</summary>
+  <img src="docs/features/feature-add-post.png">
+</details>
+
+### Post Page
+- Contains details of a single post - image, caption and post
+- Contains a like icon to allow users to like the post
+- Contains a likes and comments counter for the post
+- Features a comments section below the post
+- User stories covered: 10, 11, 12, 13
+
+<details><summary>Screenshots</summary>
+  <img src="docs/features/feature-post-page.png">
+</details>
+
+### Likes
+- Allows users to express their interest in the post.
+- Users cannot like their own posts.
+- The "Liked" page allows users to view a list of posts they have previously liked.
+- User stories covered: 11, 19
+
+<details><summary>Screenshots</summary>
+  <img src="docs/features/feature-like-01.png">
+  <img src="docs/features/feature-like-02.png">
+</details>
+
+### Comments
+- Users can leave comments on any post
+- Displays a time stamp since adding the comment (e.g. 7 minutes ago).
+- Users can edit to edit or delete their comments
+- User stories covered: 13, 14, 15
+
+<details><summary>Screenshots</summary>
+  <img src="docs/features/feature-comments.png">
+</details>
+
+### Profile Page
+- Contains information about the user.
+- Displays how many posts and followers a user has and how many users they are following.
+- Displays a bio section for the user to add some information about themselves.
+- Contains a dropdown menu to edit the profile and change profile password
+- User stories covered: 24, 26, 27
+
+<details><summary>Screenshots</summary>
+  <img src="docs/features/feature-profile-page.png">
+</details>
+
+### Avatar
+- Allow users to change their default avatar to their own picture.
+- Displayed on the profile page, in the navbar, at top of each post, alongside user comments and within the Top Profiles menu.
+- User stories covered: 22, 23, 24
+
+<details><summary>Screenshots</summary>
+  <img src="docs/features/feature-avatar-01.png">
+  <img src="docs/features/feature-avatar-02.png">
+  <img src="docs/features/feature-avatar-03.png">
+  <img src="docs/features/feature-avatar-04.png">
+  <img src="docs/features/feature-avatar-05.png">
+</details>
+
+### Change Password
+- Allows user to change their profile password
+- User stories covered: 25
+
+<details><summary>Screenshots</summary>
+  <img src="docs/features/feature-change-password.png">
+</details>
+
+### Infinite Scroll
+- Allows users to scroll through the content without having to select the next/previous page
+- Used for the posts and comments to improve user experience
+- Displays the loading spinner while content is loading.
+- User stories covered: 18
+
+<details><summary>Screenshots</summary>
+  <img src="docs/features/feature-infinite-scroll-01.png">
+  <img src="docs/features/feature-infinite-scroll-02.png">
+  <img src="docs/features/feature-infinite-scroll-03.png">
+  <img src="docs/features/feature-infinite-scroll-04.png">
+  <img src="docs/features/feature-infinite-scroll-05.png">
+</details>
+
+### Follow/Unfollow
+- Users are able to follow a profile they like and then be able to view their posts in the Feed.
+- User stories covered: 20, 28
+
+<details><summary>Screenshots</summary>
+  <img src="docs/features/feature-follow-unfollow-01.png">
+  <img src="docs/features/feature-follow-unfollow-02.png">
+  <img src="docs/features/feature-follow-unfollow-03.png">
+</details>
+
+### Top Profiles
+- Displays a list of the ten most followed users in the app, or a list of four on smaller screens
+- Contains follow buttons next to username which allow users to follow these profiles
+- Featured on the Home, Feed and Liked pages
+- User stories covered: 29
+
+<details><summary>Screenshots</summary>
+  <img src="docs/features/feature-top-profiles.png">
+</details>
+
+### Search Bar
+- Allows users to search through all posts by caption or username
+- Allows search through liked posts or posts by followed users
+- Features on the Home, Feed and Liked pages
+- User stories covered: 21
+
+<details><summary>Screenshots</summary>
+  <img src="docs/features/feature-search-bar.png">
+</details>
+
+### 404 Page
+- Displays if the user enters a URL that does not exist
+- Contains a button to redirect users to the main page
+- User stories covered: 31
+
+<details><summary>Screenshots</summary>
+  <img src="docs/features/feature-404.png">
+</details>
+
+### Feedback
+- Users are provided with feedback messages to confirm the action they have performed, such as edit/delete post, edit/delete comment, update profile or change password.
+- User stories covered: 32
+
+<details><summary>Screenshot</summary>
+  <img src="docs/features/feature-feedback-01.png">
+  <img src="docs/features/feature-feedback-02.png">
+  <img src="docs/features/feature-feedback-03.png">
+  <img src="docs/features/feature-feedback-04.png">
+  <img src="docs/features/feature-feedback-05.png">
+</details>
+
+
+## Future features / improvements
+Potential future improvements to this project:
+
+- Authentication
+  - Allow user sign up to the app using email or require email input for registration
+  - Forgotten password option to recover access to the account via email
+  - Allow user authentication with already existing accounts, e.g. LinkedIn, Google, etc. 
+
+- Profile
+  - Option to send a message to other user
+  - Option for users to be able to delete their account
+
+- Posts
+  - Show most liked posts in the app - similar to ‘Top Users’ menu
+  - Allow users to upload videos in their posts
+
+- Comments
+  - Option to reply to a selected comment and create a conversation
+  - Option to like/unlike other users’ comments
 
 
 ## Validation
