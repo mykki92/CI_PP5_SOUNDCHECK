@@ -21,12 +21,12 @@
   - [Front-End](#front-end)
   - [Back-End API](#back-end-api)
   - [Features](#features)
-  - [Future features / improvements](#future-features--improvements)
+  - [Future features/improvements](#future-features--improvements)
   - [Validation](#validation)
   - [Testing](#testing)
     - [Manual testing](#manual-testing)
     - [Device testing](#device-testing)
-    - [Browser compatibility](#browser-compatibility)
+    - [Browser testing](#browser-testing)
   - [Bugs](#bugs)
   - [Config](#config)
   - [Credits](#credits)
@@ -117,6 +117,7 @@ The Google Font family "Righteous" was used as I felt it was a clear and underst
 
 ##### Back to [top](#table-of-contents)
 
+
 ### Wireframes
 <details><summary>Landing Page</summary>
 <img src="docs/wireframes/wireframe-landing-page.png">
@@ -141,6 +142,7 @@ The Google Font family "Righteous" was used as I felt it was a clear and underst
 </details>
 
 ##### Back to [top](#table-of-contents)
+
 
 ## Technologies Used
 ### Languages
@@ -178,6 +180,7 @@ The Google Font family "Righteous" was used as I felt it was a clear and underst
 
 ##### Back to [top](#table-of-contents)
 
+
 ## Front-End
 ### React
 React is a declarative, efficient, and flexible JavaScript library for building user interfaces. Its primary goal is to make it easy to reason about an interface and its state at any point in time, by dividing the UI into a collection of independent and reusable components ([source](https://www.freecodecamp.org/news/the-react-handbook-b71c27b0a795/)).
@@ -212,12 +215,12 @@ There were various components created and reused across this application.
 - `<PopularProfiles />` - reusable component showing up ten of the most followed profiles in the app, or four on smaller screen sizes. The component displays user avatar, name and follow/unfollow button.
 - User stories covered: 29
 
-
 ## Back-End API
 ### Django REST Framework
 The API for this Front-End application was built with the Django REST Framework. The repository with a README file for the DRF Back-End can be found [here](https://github.com/mykki92/CI_PP5_SOUNDCHECK_DRF_API).
 
 ##### Back to [top](#table-of-contents)
+
 
 ## Features
 ### Landing Page
@@ -439,8 +442,62 @@ Potential future improvements to this project:
   - Option to reply to a selected comment and create a conversation
   - Option to like/unlike other users’ comments
 
+##### Back to [top](#table-of-contents)
+
 
 ## Validation
+### HTML
+The W3C Markup Validation Service was used to validate the HTML of the website. No errors were identified. 
+
+<details><summary></summary> 
+<img src="docs/validation/.png"> 
+</details> 
+<details><summary></summary> 
+<img src="docs/validation/.png"> 
+</details>
+
+### CSS
+The W3C Jigsaw CSS Validation Service was used to validate the CSS of the website. All CSS modules pass the validation with no errors.
+
+<details><summary></summary> 
+<img src="docs/validation/.png"> 
+</details> 
+<details><summary></summary> 
+<img src="docs/validation/.png"> 
+</details>
+
+### JSX
+The JSX code was validated using the ESLint utility.
+
+<details><summary>Eslint validation for components</summary> 
+<img src="docs/validation/eslint-components.png"> 
+</details> 
+<details><summary>Eslint validation for contexts</summary> 
+<img src="docs/validation/eslint-contexts.png"> 
+</details>
+
+### Chrome Dev Tools Lighthouse 
+Lighthouse was used to test the performance, accessibility, best practice and SEO of the site. The validation was done for both desktop & mobile.  
+
+#### Desktop 
+<details><summary></summary> 
+<img src="docs/validation/lighthouse-.png "> 
+</details>
+
+#### Mobile 
+<details><summary></summary> 
+<img src="docs/validation/lighthouse-.png "> 
+</details>
+
+### Wave
+The WAVE WebAIM web accessibility evaluation tool was used to test the websites accessibility.
+
+<details><summary></summary>
+<img src="docs/validation/wave-.png">
+</details>
+<details><summary></summary>
+<img src="docs/validation/wave-p.png">
+</details>
 
 
 ## Testing
@@ -921,6 +978,7 @@ Testing has been carried out on the following browsers:
 - Microsoft Edge
 - Safari
 
+##### Back to [top](#table-of-contents)
 
 ## Bugs
 | **Bug** | **Fix** |
@@ -961,3 +1019,5 @@ This project was inspired by the ['Moments'](https://github.com/Code-Institute-S
 ### Acknowledgements
 My Code Institute Mentor Mo Shami for his guidance and advice.
 Code Institute learning modules and tutor support.
+
+##### Back to [top](#table-of-contents)
