@@ -10,12 +10,6 @@
     padding-top: 20px;
   }
 
-  .Carousel {
-    width: 370px;
-    margin: 0 auto;
-    height: 100%;
-  }
-  
   .LandingButton {
     margin-right: 15px;
     color: #ffffff;
@@ -39,9 +33,5 @@
     .LandingImage {
       width: 80%;
       height: 80%;
-    }
-    .Carousel {
-      width: 90%;
-      height: 90%;
     }
   }

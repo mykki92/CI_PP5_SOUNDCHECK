@@ -2,11 +2,8 @@ import React from "react";
 import { Card, Button, Row, Col, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import landingImage from "../assets/landing-page-image.jpg";
-import landingImageTwo from "../assets/landing-page-image-2.jpg";
-import landingImageThree from "../assets/landing-page-image-3.jpg";
 import styles from "../styles/LandingPage.module.css";
 import appStyles from "../App.module.css";
-import Carousel from 'react-bootstrap/Carousel'
 
 /*
   Landing page with app description
@@ -27,29 +24,11 @@ const LandingPage = () => {
                 </Card.Text>
               </Card.Body>
               <Card.Body>
-              <Carousel className={styles.Carousel} fade>
-                <Carousel.Item>
-                  <img
-                    src={landingImageTwo}
-                    className={styles.LandingImage}
-                    alt="landing page image"
-                  />
-                </Carousel.Item>
-                <Carousel.Item>
-                  <img
-                    src={landingImage}
-                    className={styles.LandingImage}
-                    alt="landing page image"
-                  />
-                </Carousel.Item>
-                <Carousel.Item>
-                  <img
-                    src={landingImageThree}
-                    className={styles.LandingImage}
-                    alt="landing page image"
-                  />
-                </Carousel.Item>
-              </Carousel>
+                <img
+                  src={landingImage}
+                  className={styles.LandingImage}
+                  alt="landing page image"
+                />
               <br />
               </Card.Body>
               <Card.Body>
