@@ -115,6 +115,8 @@ These colours were used throughout the pages to ensure consistent contrast and g
 ### Fonts
 The Google Font family "Righteous" was used as I felt it was a clear and understandable font that wasn't overly formal and fitted the atmosphere of the site.
 
+##### Back to [top](#table-of-contents)
+
 ### Wireframes
 <details><summary>Landing Page</summary>
 <img src="docs/wireframes/wireframe-landing-page.png">
@@ -137,6 +139,8 @@ The Google Font family "Righteous" was used as I felt it was a clear and underst
 <details><summary>Profile</summary>
 <img src="docs/wireframes/wireframe-profile.png">
 </details>
+
+##### Back to [top](#table-of-contents)
 
 ## Technologies Used
 ### Languages
@@ -172,14 +176,48 @@ The Google Font family "Righteous" was used as I felt it was a clear and underst
   - [Lighthouse](https://developers.google.com/web/tools/lighthouse/) used to validate performance, accessibility, best practice and SEO of the app
   - [Wave](https://wave.webaim.org/) - used to evaluate application accessibility
 
+##### Back to [top](#table-of-contents)
 
 ## Front-End
 ### React
+React is a declarative, efficient, and flexible JavaScript library for building user interfaces. Its primary goal is to make it easy to reason about an interface and its state at any point in time, by dividing the UI into a collection of independent and reusable components ([source](https://www.freecodecamp.org/news/the-react-handbook-b71c27b0a795/)).
+
+I used React for this application for several reasons:
+- Most used library for developing social networking and media content applications - e.g. Meta (formerly Facebook), Instagram, Netflix, Airbnb, etc.
+- Flexibility - the React code is easier to maintain and is flexible due to its modular structure, compared to other front-end frameworks.
+- Speed - applying React significantly increases the page loading speed and reducing the wait, which affects user experience and satisfaction.
+- React Bootstrap - excellent choice for improving user experience, used for styling and responsiveness. It comes with ready-to-use React built components. They are implemented with accessibility in mind, which is a vital factor when creating a front-end application. I used plain Bootstrap in my previous projects, so it was an easy choice to use React Bootstrap in this app.
+- Reusability of components - no need to write various codes for the same features.
+
+There were various components created and reused across this application.
+
+- `<Asset />` - multi purpose component, used to display a range of items by being passed props. Those include an image with source and alt attribute or a message consisting of a paragraph.
+- User stories covered: 18
+
+- `<Avatar />` - reusable component, used to display the user profile picture. This component uses props which can specify the source of the image and also its size. An example of this component's reusability is the image size on the profile page being bigger than that of the one in the Nav Bar yet it is the same component and source image used.
+- User stories covered: 22, 23, 24
+
+- `<DropdownMenu />` - reusable component, used to display the three dots dropdown menu. These menus are used to display options to edit or delete your posts and comments or to edit your profile details.
+- User stories covered: 14, 15, 24, 25
+
+- `<FeedbackMessage />` - component for displaying feedback messages to the user upon editing/deleting comments, deleting post, updating profile information or a password.
+- User stories covered: 32
+
+- `<NavBar />` - reusable component that features on each page of the application. For signed in users it shows links to Home, Feed, Liked, Add Post, Profile, Sign Out and user avatar/picture. For signed out users, it displays links to sign up or sign in.
+- User stories covered: 2, 3
+
+- `<PageNotFound />` - component for displaying a 404 graphic error message with a return to menu button when a user enters an invalid URL.
+- User stories covered: 31
+
+- `<PopularProfiles />` - reusable component showing up ten of the most followed profiles in the app, or four on smaller screen sizes. The component displays user avatar, name and follow/unfollow button.
+- User stories covered: 29
+
 
 ## Back-End API
 ### Django REST Framework
 The API for this Front-End application was built with the Django REST Framework. The repository with a README file for the DRF Back-End can be found [here](https://github.com/mykki92/CI_PP5_SOUNDCHECK_DRF_API).
 
+##### Back to [top](#table-of-contents)
 
 ## Features
 
