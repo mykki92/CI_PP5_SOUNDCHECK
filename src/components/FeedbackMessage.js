@@ -3,6 +3,9 @@ import css from "classnames";
 import React from "react";
 import { useState } from "react";
 
+/*
+  Component to handle feedback messages
+*/
 export default function FeedbackMessage({ variant, message }) {
   const [isShown, setIsShown] = useState(true);
 

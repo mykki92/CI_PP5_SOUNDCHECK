@@ -16,6 +16,10 @@ const ThreeDots = React.forwardRef(({ onClick }, ref) => (
   />
 ));
 
+/*
+  Dropdown menu with options to edit or delete a post
+  Calls the handleEdit & handleDelete functions based on destructured props
+*/
 export const DropdownMenu = ({ handleEdit, handleDelete }) => {
   return (
     <Dropdown className="ml-auto" drop="left">
@@ -23,7 +27,7 @@ export const DropdownMenu = ({ handleEdit, handleDelete }) => {
 
       <Dropdown.Menu
         className="text-center"
-        popperConfig={{ strategy: "fixed" }}
+        popperConfig={{ strategy: "fixed" }} // fixes the position of the dropdown menu consistently across browsers
       >
         <Dropdown.Item
           className={styles.DropdownItem}
@@ -44,6 +48,11 @@ export const DropdownMenu = ({ handleEdit, handleDelete }) => {
   );
 };
 
+/*
+  Dropdown menu on the profile page
+  Displays icons for edit profile & change password and username
+  Makes a request to fetch profile data based on the profile id
+*/
 export const ProfileEditDropdown = ({ id }) => {
   const history = useHistory();
   return (

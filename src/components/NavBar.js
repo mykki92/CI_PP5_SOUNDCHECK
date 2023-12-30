@@ -18,6 +18,11 @@ const NavBar = () => {
 
   const { expanded, setExpanded, ref } = useClickOutsideToggle();
 
+  /*
+    Handles user sign out
+    Removes saved current user
+    Redirects to the landing page
+  */
   const handleSignOut = async () => {
     try {
       await axios.post("dj-rest-auth/logout/");
@@ -28,6 +33,10 @@ const NavBar = () => {
     }
   };
 
+  /* 
+    Displays full list of site pages
+    for logged in users
+  */
   const loggedInIcons = (
     <>
       <NavLink
@@ -62,6 +71,11 @@ const NavBar = () => {
       </NavLink>
     </>
   );
+
+  /* 
+    Displays only home, sign up and sign in links
+    for logged out users
+  */
   const loggedOutIcons = (
     <>
       <NavLink
