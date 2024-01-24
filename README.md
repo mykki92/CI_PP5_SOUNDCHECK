@@ -28,7 +28,10 @@
     - [Device testing](#device-testing)
     - [Browser testing](#browser-testing)
   - [Bugs](#bugs)
-  - [Config](#config)
+  - [Deployment](#deployment)
+      - [Heroku](#heroku)
+      - [Forking GitHub Repo](#forking-github-repo)
+      - [Clone GitHub Repo](#clone-github-repo)
   - [Credits](#credits)
 
 
@@ -1053,7 +1056,90 @@ Testing has been carried out on the following browsers:
 | Infinite scroll is not displaying in grid format on the profile page | Put the grid format as part of the infinite scroll elements properties rather than its parent div container |
 
 
-## Config
+## Deployment
+### Heroku
+
+This project was deployed to [Heroku](https://www.heroku.com) in the project's early stages to allow progressive deployment and continual responsive testing. This was achieved by implementing the following steps:
+
+1. Use the "pip freeze -> requiremnts.txt" command in the terminal to save any libraries that need to be installed in the file. 
+2. Log in to [Cloudinary](https://cloudinary.com/) or create an account for free. This platform is required to store images for the site.
+3. Navigate to the Dashboard on Cloudinary.
+
+<details>
+<summary>Screenshot</summary>
+  <img src="docs/deployment/heroku-deployment-01.png">
+</details>
+
+4. Copy and keep a note of the value of the 'API Environment Variable" (beginning with 'cloudinary://') until the end, this will be used in the Heroku Config Vars.
+5. Log in to [ElephantSQL](https://www.elephantsql.com/) or create an account for free. This platform is required to host the database for the site.
+6. Click on Create a new instance.
+
+<details>
+<summary>Screenshot</summary>
+  <img src="docs/deployment/heroku-deployment-02.png">
+</details>
+
+7. Select a plan. Name your instance, select the Tiny Turtle (free) plan and leave tags blank.
+
+<details>
+<summary>Screenshot</summary>
+  <img src="docs/deployment/heroku-deployment-03.png">
+</details>
+
+8. Select the region and choose the nearest data centre to your location.
+
+<details>
+<summary>Screenshot</summary>
+  <img src="docs/deployment/heroku-deployment-04.png">
+</details>
+
+9. Check the details you've entered are correct and click on the create instance button.
+
+<details>
+<summary>Screenshot</summary>
+  <img src="docs/deployment/heroku-deployment-05.png">
+</details>
+
+10. From the instances section, select the instance that you have just created.
+11. Get the ElephantSQL database URL from the instance details page and copy, this will be used in the Heroku Config Vars.
+
+<details>
+<summary>Screenshot</summary>
+  <img src="docs/deployment/heroku-deployment-06.png">
+</details>
+
+12. Navigate to https://www.heroku.com/ and login or create an account. 
+13. Click the "new" button in the upper right corner and select "create new app".
+
+<details>
+<summary>Screenshot</summary>
+  <img src="docs/deployment/heroku-deployment-07.png">
+</details>
+
+16. Choose an app name and your region and click "Create app".
+
+<details>
+<summary>Screenshot</summary>
+  <img src="docs/deployment/heroku-deployment-08.png">
+</details>
+
+17. Reveal Config Vars and store the required config var names and values as below:
+
+- `CLOUDINARY_URL`: *your Cloudinary URL from step 4*
+- `DATABASE_URL`: *your ElephantSQL postgres database URL from step 11*
+- `PORT`: `8000`
+- `SECRET_KEY`: *your secret key*
+
+<details>
+<summary>Screenshot</summary>
+  <img src="docs/deployment/heroku-deployment-09.png">
+</details>
+
+18. Go to the "deploy" tab and pick GitHub as a deployment method.
+19. Search for a repository to connect to and select the branch you would like to build the app from.
+20. If preferred, enable automatic deploys and then deploy branch.
+21. Wait for the app to build and then click on the "View" link which will redirect you to the deployed live site.
+
 ### Forking the GitHub Repository
 1. Go to the GitHub repository
 2. Click on Fork button in top right corner
