@@ -44,7 +44,7 @@ const Comment = (props) => {
           results: [
             {
               ...prevPost.results[0],
-              comments_number: prevPost.results[0].comments_number - 1,
+              comments_count: prevPost.results[0].comments_count - 1,
             },
           ],
         }));
@@ -56,7 +56,7 @@ const Comment = (props) => {
       } catch (err) {
         //console.log(err)
       }
-    }, 2500);
+    }, 1500);
   }; 
 
   return isDeleted ? (
