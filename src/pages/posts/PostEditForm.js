@@ -19,11 +19,11 @@ function PostEditForm() {
   const [errors, setErrors] = useState({});
 
   const [postData, setPostData] = useState({
-    title: "",
-    content: "",
-    image: "",
+    caption: "",
+    tags: "",
+    post_image: "",
   });
-  const { title, content, image } = postData;
+  const { caption, tags, post_image } = postData;
 
   const imageInput = useRef(null);
   const history = useHistory();
@@ -38,9 +38,9 @@ function PostEditForm() {
     const handleMount = async () => {
       try {
         const { data } = await axiosReq.get(`/posts/${id}/`);
-        const { title, content, image, is_owner } = data;
+        const { caption, tags, post_image, is_owner } = data;
 
-        is_owner ? setPostData({ title, content, image }) : history.push("/");
+        is_owner ? setPostData({ caption, tags, post_image }) : history.push("/");
       } catch (err) {
         // console.log(err);
       }
@@ -64,7 +64,7 @@ function PostEditForm() {
   */
   const handleChangeImage = (event) => {
     if (event.target.files.length) {
-      URL.revokeObjectURL(image);
+      URL.revokeObjectURL(post_image);
       setPostData({
         ...postData,
         image: URL.createObjectURL(event.target.files[0]),
@@ -80,12 +80,12 @@ function PostEditForm() {
     event.preventDefault();
     const formData = new FormData();
 
-    formData.append("title", title);
-    formData.append("content", content);
-    formData.append("image", imageInput.current.files[0]);
+    formData.append("caption", caption);
+    formData.append("tags", tags);
+    formData.append("post_image", imageInput.current.files[0]);
 
     if (imageInput?.current?.files[0]) {
-        formData.append("image", imageInput.current.files[0]);
+        formData.append("post_image", imageInput.current.files[0]);
       }
   
       try {
@@ -102,31 +102,31 @@ function PostEditForm() {
   const textFields = (
     <div className="text-center">
       <Form.Group>
-        <Form.Label>Title</Form.Label>
+        <Form.Label>Caption</Form.Label>
         <Form.Control
-          type="text"
-          name="title"
-          value={title}
+          as="textarea"
+          rows={6}
+          name="caption"
+          value={caption}
           onChange={handleChange}
         />
       </Form.Group>
-      {errors?.title?.map((message, idx) => (
+      {errors?.caption?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
           {message}
         </Alert>
       ))}
 
       <Form.Group>
-        <Form.Label>Content</Form.Label>
+        <Form.Label>Tags</Form.Label>
         <Form.Control
-          as="textarea"
-          rows={6}
-          name="content"
-          value={content}
+          type="text"
+          name="tags"
+          value={tags}
           onChange={handleChange}
         />
       </Form.Group>
-      {errors?.content?.map((message, idx) => (
+      {errors?.tags?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
           {message}
         </Alert>
@@ -153,7 +153,7 @@ function PostEditForm() {
           >
             <Form.Group className="text-center">
               <figure>
-                <Image className={appStyles.Image} src={image} rounded />
+                <Image className={appStyles.Image} src={post_image} rounded />
               </figure>
               <div>
                 <Form.Label
