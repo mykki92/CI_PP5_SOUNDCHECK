@@ -55,11 +55,11 @@ const Post = (props) => {
   };
 
   /*
-    Handles post likes
+    Handles post checks
     Sends a request to the API for a post by id
-    Increments the likes number by 1
+    Increments the checks number by 1
   */
-  const handleLike = async () => {
+  const handleCheck = async () => {
     try {
       const { data } = await axiosRes.post("/checks/", { post: id });
       setPosts((prevPosts) => ({
@@ -76,11 +76,11 @@ const Post = (props) => {
   };
 
   /*
-    Handles post unliking
+    Handles post uncheck
     Sends a request to the API for a post by id
-    Decrements the likes number by 1
+    Decrements the checks number by 1
   */
-  const handleUnlike = async () => {
+  const handleUncheck = async () => {
     try {
       await axiosRes.delete(`/checks/${check_id}/`);
       setPosts((prevPosts) => ({
@@ -129,22 +129,22 @@ const Post = (props) => {
           {is_owner ? (
             <OverlayTrigger
               placement="top"
-              overlay={<Tooltip>You can't like your own post!</Tooltip>}
+              overlay={<Tooltip>You can't check your own post!</Tooltip>}
             >
               <i className="far fa-heart" />
             </OverlayTrigger>
           ) : check_id ? (
-            <span onClick={handleUnlike}>
+            <span onClick={handleUncheck}>
               <i className={`fas fa-heart ${styles.Heart}`} />
             </span>
           ) : currentUser ? (
-            <span onClick={handleLike}>
+            <span onClick={handleCheck}>
               <i className={`far fa-heart ${styles.HeartOutline}`} />
             </span>
           ) : (
             <OverlayTrigger
               placement="top"
-              overlay={<Tooltip>Log in to like posts!</Tooltip>}
+              overlay={<Tooltip>Log in to check posts!</Tooltip>}
             >
               <i className="far fa-heart" />
             </OverlayTrigger>
