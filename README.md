@@ -37,7 +37,7 @@
 
 ## About
 Soundcheck is a music-based social media platform where artists and fans can share content and information on new music and upcoming shows, find new artists and friends and network with like-minded people. 
-Everyone can like other users' pictures and share their opinion on every post. Users can also follow their favourite profiles and easily see updates on their activity, and save a list of posts that they like to view again later.
+Everyone can check other users' pictures and share their opinion on every post. Users can also follow their favourite profiles and easily see updates on their activity, and save a list of posts that they check to view again later.
 
 
 ## Project Goals
@@ -47,9 +47,9 @@ The platform is intended to be informal and based on media and entertainment.
 The key functionality aspects:
 - simple and intuitive navigation across all pages
 - user authentication
-- user interaction via posts, comments, likes, followers
+- user interaction via posts, comments, checks, followers
 - user profiles with profile pictures, bios and profile stats
-- CRUD functionality for posts, comments, likes, followers and profile information
+- CRUD functionality for posts, comments, checks, followers and profile information
 - posts filtering by caption and author
 - responsiveness for consistent user experience across all devices
 
@@ -72,7 +72,7 @@ The key functionality aspects:
 8. As a user, I can title my post so that other users can find it by its title.
 9. As a user, I can view other people’s posts so that I can get inspired by their images.
 10.  As a user, I can view the details of a single post so that I can see its full description and other users’ comments.
-11. As a user, I can like a specific post to show my interest.
+11. As a user, I can check a specific post to show my interest.
 
 #### The Post Page 
  14. As a user, I can add comments to a post so that I can share my thoughts about the content with the community.
@@ -85,7 +85,7 @@ The key functionality aspects:
 #### Main page 
 19. As a user, I can view posts ordered by most recently added so that I am up to date with the newest content.
 20. As a user, I can keep scrolling through the posts so that they are loaded automatically and I don't have to select the next page.
-21. As a user, I can see all posts I have previously liked to save any content of interest.
+21. As a user, I can see all posts I have previously checked to save any content of interest.
 22. As a user, I can view posts from users I have followed, so I can stay up to date with their activity.
 24. As a user, I can search for posts by title so that I can find the posts I am interested in. 
 
@@ -112,7 +112,7 @@ The key functionality aspects:
 
 ## Design
 ### Colours
-It was my intention to keep the colours simple in order to draw the users attention to the photographs and content posted on the site without distraction. I have used a simple white background with black text. Buttons are black with white text and turn grey when hovered over. The likes feature uses a dark red for the heart once the post is liked.      
+It was my intention to keep the colours simple in order to draw the users attention to the photographs and content posted on the site without distraction. I have used a simple white background with black text. Buttons are black with white text and turn grey when hovered over. The checks feature uses a dark red for the bolt icon once the post is checked.      
 These colours were used throughout the pages to ensure consistent contrast and good user experience.
 
 ### Fonts
@@ -131,8 +131,8 @@ The Google Font family "Righteous" was used as I felt it was a clear and underst
 <details><summary>Sign In</summary>
 <img src="docs/wireframes/wireframe-signin.png">
 </details>
-<details><summary>Home/Feed/Liked</summary>
-<img src="docs/wireframes/wireframe-home-feed-liked.png">
+<details><summary>Home/Feed/Checked</summary>
+<img src="docs/wireframes/wireframe-home-feed-checked.png">
 </details>
 <details><summary>Add Post</summary>
 <img src="docs/wireframes/wireframe-add-post.png">
@@ -209,7 +209,7 @@ There were various components created and reused across this application.
 - `<FeedbackMessage />` - component for displaying feedback messages to the user upon editing/deleting comments, deleting post, updating profile information or a password.
 - User stories covered: 32
 
-- `<NavBar />` - reusable component that features on each page of the application. For signed in users it shows links to Home, Feed, Liked, Add Post, Profile and Sign Out. For signed out users, it displays links to sign up or sign in.
+- `<NavBar />` - reusable component that features on each page of the application. For signed in users it shows links to Home, Feed, Checked, Add Post, Profile and Sign Out. For signed out users, it displays links to sign up or sign in.
 - User stories covered: 2, 3
 
 - `<PageNotFound />` - component for displaying a 404 graphic error message with a return to menu button when a user enters an invalid URL.
@@ -238,7 +238,7 @@ The API for this Front-End application was built with the Django REST Framework.
 ### Navigation Bar
 - Featured at the top of all pages
 - Two variants of the navbar:
-  - Signed in users will see links to Home, Feed, Liked, Add Post, Profile and Sign Out
+  - Signed in users will see links to Home, Feed, Checked, Add Post, Profile and Sign Out
   - Signed out users will see links to sign up or sign in
 - The nav bar is fully responsive and changes to a toggler (hamburger menu) on smaller size screens
 - User stories covered: 2, 3
@@ -296,8 +296,8 @@ The API for this Front-End application was built with the Django REST Framework.
 
 ### Post Page
 - Contains details of a single post - image, caption and post
-- Contains a like icon to allow users to like the post
-- Contains a likes and comments counter for the post
+- Contains a check icon to allow users to check the post
+- Contains a checks and comments counter for the post
 - Features a comments section below the post
 - User stories covered: 10, 11, 12, 13
 
@@ -305,10 +305,10 @@ The API for this Front-End application was built with the Django REST Framework.
   <img src="docs/features/feature-post-page.png">
 </details>
 
-### Likes
+### Checks
 - Allows users to express their interest in the post.
-- Users cannot like their own posts.
-- The "Liked" page allows users to view a list of posts they have previously liked.
+- Users cannot check their own posts.
+- The "Checked" page allows users to view a list of posts they have previously Checked.
 - User stories covered: 11, 19
 
 <details><summary>Screenshots</summary>
@@ -385,7 +385,7 @@ The API for this Front-End application was built with the Django REST Framework.
 ### Top Profiles
 - Displays a list of the ten most followed users in the app, or a list of four on smaller screens
 - Contains follow buttons next to username which allow users to follow these profiles
-- Featured on the Home, Feed and Liked pages
+- Featured on the Home, Feed and Checked pages
 - User stories covered: 29
 
 <details><summary>Screenshots</summary>
@@ -394,8 +394,8 @@ The API for this Front-End application was built with the Django REST Framework.
 
 ### Search Bar
 - Allows users to search through all posts by caption or username
-- Allows search through liked posts or posts by followed users
-- Features on the Home, Feed and Liked pages
+- Allows search through checked posts or posts by followed users
+- Features on the Home, Feed and Checked pages
 - User stories covered: 21
 
 <details><summary>Screenshots</summary>
@@ -436,14 +436,14 @@ Potential future improvements to this project:
   - Option for users to be able to delete their account
 
 - Posts
-  - Show most liked posts in the app - similar to ‘Top Users’ menu
+  - Show most checked posts in the app - similar to ‘Top Users’ menu
   - Allow users to upload videos in their posts
   - Allow users to tag other users in their posts
   - Allow users to repost or share other users posts to other sites
 
 - Comments
   - Option to reply to a selected comment and create a conversation
-  - Option to like/unlike other users’ comments
+  - Option to check/uncheck other users’ comments
 
 ##### Back to [top](#table-of-contents)
 
@@ -709,11 +709,11 @@ The WAVE WebAIM web accessibility evaluation tool was used to test the websites 
 <hr>
 <br>
 
-11. As a user, I can like a specific post so that I can show my interest and support for content that I like.
+11. As a user, I can check a specific post so that I can show my interest and support for content that I like.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Likes | Click the like icon under any post | Post is liked and like icon is marked red | Works as expected |
+| Checks | Click the check icon under any post | Post is checked and check icon is marked red | Works as expected |
 
 <details><summary>Screenshots</summary>
   <img src="docs/testing/user-story-testing-11.png">
@@ -798,7 +798,7 @@ The WAVE WebAIM web accessibility evaluation tool was used to test the websites 
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |------------|------------|---------------------|-------------------|
-| | Navigate to the home, feed or liked page | Posts are displayed with a date stamp with most recent posts at the top of the list | Works as expected |
+| | Navigate to the home, feed or checked page | Posts are displayed with a date stamp with most recent posts at the top of the list | Works as expected |
 
 <details><summary>Screenshots</summary>
   <img src="docs/testing/user-story-testing-17.png">
@@ -811,7 +811,7 @@ The WAVE WebAIM web accessibility evaluation tool was used to test the websites 
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |------------|------------|---------------------|-------------------|
-| Infinite Scroll | Navigate to the home, feed, liked or profile page | Displays list of all available posts without changing pages. Displays a spinning icon if the posts have not been loaded | Works as expected |
+| Infinite Scroll | Navigate to the home, feed, checked or profile page | Displays list of all available posts without changing pages. Displays a spinning icon if the posts have not been loaded | Works as expected |
 
 <details><summary>Screenshots</summary>
   <img src="docs/testing/user-story-testing-18-01.png">
@@ -824,11 +824,11 @@ The WAVE WebAIM web accessibility evaluation tool was used to test the websites 
 <hr>
 <br>
 
-19. As a user, I can see all posts I have previously liked so that I can save any content of interest.
+19. As a user, I can see all posts I have previously checked so that I can save any content of interest.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |------------|------------|---------------------|-------------------|
-| Likes | Click the “Liked” button on the nav bar  | A list is displayed of all posts that you have previously liked | Works as expected |
+| Checks | Click the “Checked” button on the nav bar  | A list is displayed of all posts that you have previously checked | Works as expected |
 
 <details><summary>Screenshots</summary>
   <img src="docs/testing/user-story-testing-19-01.png">
@@ -857,7 +857,7 @@ The WAVE WebAIM web accessibility evaluation tool was used to test the websites 
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |------------|------------|---------------------|-------------------|
-| Search Bar | Select the search bar at the top of the home, feed or liked pages and enter a keyword  | A list is displayed of all posts with the keyword in the title | Works as expected |
+| Search Bar | Select the search bar at the top of the home, feed or checked pages and enter a keyword  | A list is displayed of all posts with the keyword in the title | Works as expected |
 
 <details><summary>Screenshots</summary>
   <img src="docs/testing/user-story-testing-21.png">
@@ -886,7 +886,7 @@ The WAVE WebAIM web accessibility evaluation tool was used to test the websites 
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |------------|------------|---------------------|-------------------|
-| Avatar | Navigate to the home, feed or liked page, or any users profile page  | User avatars are displayed on their profile page and alongside their username in posts and comments | Works as expected |
+| Avatar | Navigate to the home, feed or checked page, or any users profile page  | User avatars are displayed on their profile page and alongside their username in posts and comments | Works as expected |
 
 <details><summary>Screenshots</summary>
   <img src="docs/testing/user-story-testing-23-01.png">
