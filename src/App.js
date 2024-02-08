@@ -53,10 +53,10 @@ function App() {
           />
           <Route
             exact
-            path="/liked"
+            path="/checked"
             render={() => (
               <PostsPage
-                message="No results found, adjust your search or like more posts"
+                message="No results found, adjust your search or check more posts"
                 filter={`checks__owner__profile=${profile_id}&ordering=-checks__created_at&`} 
               />
             )} 

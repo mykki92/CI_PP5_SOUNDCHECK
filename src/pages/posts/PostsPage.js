@@ -32,7 +32,7 @@ function PostsPage({ message, filter = "" }) {
     Handles API request using the filters for each of pages
     to fetch relevant posts to the filter
     Displays all posts, posts by the profiles followed 
-    or liked posts
+    or checked posts
     Shows a loading spinner when content is loading
   */
   useEffect(() => {
