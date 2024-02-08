@@ -27,11 +27,11 @@ const ProfileEditForm = () => {
   const imageFile = useRef();
 
   const [profileData, setProfileData] = useState({
-    name: "",
-    content: "",
-    image: "",
+    username: "",
+    bio: "",
+    profile_image: "",
   });
-  const { name, content, image } = profileData;
+  const { username, bio, profile_image } = profileData;
 
   const [errors, setErrors] = useState({});
 
@@ -46,8 +46,8 @@ const ProfileEditForm = () => {
       if (currentUser?.profile_id?.toString() === id) {
         try {
           const { data } = await axiosReq.get(`/profiles/${id}/`);
-          const { name, content, image } = data;
-          setProfileData({ name, content, image });
+          const { username, bio, profile_image } = data;
+          setProfileData({ username, bio, profile_image });
         } catch (err) {
           // console.log(err);
           history.push("/");
@@ -78,11 +78,11 @@ const ProfileEditForm = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData();
-    formData.append("name", name);
-    formData.append("content", content);
+    formData.append("username", username);
+    formData.append("bio", bio);
 
     if (imageFile?.current?.files[0]) {
-      formData.append("image", imageFile?.current?.files[0]);
+      formData.append("profile_image", imageFile?.current?.files[0]);
     }
 
     try {
@@ -112,14 +112,14 @@ const ProfileEditForm = () => {
         <Form.Label>Bio</Form.Label>
         <Form.Control
           as="textarea"
-          value={content}
+          value={bio}
           onChange={handleChange}
-          name="content"
+          name="bio"
           rows={7}
         />
       </Form.Group>
 
-      {errors?.content?.map((message, idx) => (
+      {errors?.bio?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
           {message}
         </Alert>
@@ -142,9 +142,9 @@ const ProfileEditForm = () => {
         <Col className="py-2 p-0 p-md-2 text-center" md={7} lg={6}>
           <Container className={appStyles.Content}>
             <Form.Group>
-              {image && (
+              {profile_image && (
                 <figure>
-                  <Image src={image} fluid />
+                  <Image src={profile_image} fluid />
                 </figure>
               )}
               {errors?.image?.map((message, idx) => (

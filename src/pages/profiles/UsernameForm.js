@@ -16,6 +16,7 @@ import {
 
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
+import FeedbackMessage from "../../components/FeedbackMessage";
 
 const UsernameForm = () => {
   const [username, setUsername] = useState("");
@@ -26,6 +27,7 @@ const UsernameForm = () => {
 
   const currentUser = useCurrentUser();
   const setCurrentUser = useSetCurrentUser();
+  const [showAlert, setShowAlert] = useState(false);
 
   /*
     Handles username change
@@ -53,7 +55,10 @@ const UsernameForm = () => {
         ...prevUser,
         username,
       }));
-      history.goBack();
+      setShowAlert(true);
+      setTimeout(function () {
+        history.goBack();
+      }, 2500);
     } catch (err) {
       // console.log(err);
       setErrors(err.response?.data);
@@ -63,6 +68,12 @@ const UsernameForm = () => {
   return (
     <Row>
       <Col className="py-2 mx-auto text-center" md={6}>
+      {showAlert && (
+          <FeedbackMessage
+            variant="info"
+            message="Username has been changed."
+          />
+        )}
         <Container className={appStyles.Content}>
           <Form onSubmit={handleSubmit} className="my-2">
             <Form.Group>
