@@ -15,11 +15,11 @@ const Post = (props) => {
     profile_id,
     profile_image,
     comments_count,
-    likes_count,
-    like_id,
-    title,
-    content,
-    image,
+    check_count,
+    check_id,
+    caption,
+    tags,
+    post_image,
     updated_at,
     postPage,
     setPosts,
@@ -61,12 +61,12 @@ const Post = (props) => {
   */
   const handleLike = async () => {
     try {
-      const { data } = await axiosRes.post("/likes/", { post: id });
+      const { data } = await axiosRes.post("/checks/", { post: id });
       setPosts((prevPosts) => ({
         ...prevPosts,
         results: prevPosts.results.map((post) => {
           return post.id === id
-            ? { ...post, likes_count: post.likes_count + 1, like_id: data.id }
+            ? { ...post, check_count: post.check_count + 1, check_id: data.id }
             : post;
         }),
       }));
@@ -82,12 +82,12 @@ const Post = (props) => {
   */
   const handleUnlike = async () => {
     try {
-      await axiosRes.delete(`/likes/${like_id}/`);
+      await axiosRes.delete(`/checks/${check_id}/`);
       setPosts((prevPosts) => ({
         ...prevPosts,
         results: prevPosts.results.map((post) => {
           return post.id === id
-            ? { ...post, likes_count: post.likes_count - 1, like_id: null }
+            ? { ...post, check_count: post.check_count - 1, check_id: null }
             : post;
         }),
       }));
@@ -120,11 +120,11 @@ const Post = (props) => {
         </Media>
       </Card.Body>
       <Link to={`/posts/${id}`}>
-        <Card.Img src={image} alt={title} />
+        <Card.Img src={post_image} alt={caption} />
       </Link>
       <Card.Body>
-        {title && <Card.Title className="text-center">{title}</Card.Title>}
-        {content && <Card.Text>{content}</Card.Text>}
+        {caption && <Card.Title className="text-center">{caption}</Card.Title>}
+        {tags && <Card.Text>{tags}</Card.Text>}
         <div className={styles.PostBar}>
           {is_owner ? (
             <OverlayTrigger
@@ -133,7 +133,7 @@ const Post = (props) => {
             >
               <i className="far fa-heart" />
             </OverlayTrigger>
-          ) : like_id ? (
+          ) : check_id ? (
             <span onClick={handleUnlike}>
               <i className={`fas fa-heart ${styles.Heart}`} />
             </span>
@@ -149,7 +149,7 @@ const Post = (props) => {
               <i className="far fa-heart" />
             </OverlayTrigger>
           )}
-          {likes_count}
+          {check_count}
           <Link to={`/posts/${id}`}>
             <i className="far fa-comments" />
           </Link>
@@ -163,14 +163,14 @@ const Post = (props) => {
 const ProfilePost = (props) => {
   const {
     id,
-    title,
-    image,
+    caption,
+    post_image,
   } = props;
 
   return (
     <Card>
         <Link to={`/posts/${id}`}>
-            <Card.Img className={styles.ProfilePost} src={image} alt={title} />
+            <Card.Img className={styles.ProfilePost} src={post_image} alt={caption} />
         </Link> 
     </Card>
   );

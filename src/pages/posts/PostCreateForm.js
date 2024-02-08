@@ -25,11 +25,11 @@ function PostCreateForm() {
   const [errors, setErrors] = useState({});
 
   const [postData, setPostData] = useState({
-    title: "",
-    content: "",
-    image: "",
+    caption: "",
+    tags: "",
+    post_image: "",
   });
-  const { title, content, image } = postData;
+  const { caption, tags, post_image } = postData;
 
   const imageInput = useRef(null);
   const history = useHistory();
@@ -49,10 +49,10 @@ function PostCreateForm() {
   */
   const handleChangeImage = (event) => {
     if (event.target.files.length) {
-      URL.revokeObjectURL(image);
+      URL.revokeObjectURL(post_image);
       setPostData({
         ...postData,
-        image: URL.createObjectURL(event.target.files[0]),
+        post_image: URL.createObjectURL(event.target.files[0]),
       });
     }
   };
@@ -64,9 +64,9 @@ function PostCreateForm() {
     event.preventDefault();
     const formData = new FormData();
 
-    formData.append("title", title);
-    formData.append("content", content);
-    formData.append("image", imageInput.current.files[0]);
+    formData.append("caption", caption);
+    formData.append("tags", tags);
+    formData.append("post_image", imageInput.current.files[0]);
 
     try {
       const { data } = await axiosReq.post("/posts/", formData);
@@ -87,29 +87,29 @@ function PostCreateForm() {
       <Form.Group>
         <Form.Label>Caption</Form.Label>
         <Form.Control
-          type="text"
-          name="title"
-          value={title}
+          as="textarea"
+          rows={6}
+          name="caption"
+          value={caption}
           onChange={handleChange}
         />
       </Form.Group>
-      {errors?.title?.map((message, idx) => (
+      {errors?.caption?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
           {message}
         </Alert>
       ))}
 
       <Form.Group>
-        <Form.Label>Post</Form.Label>
+        <Form.Label>Tags</Form.Label>
         <Form.Control
-          as="textarea"
-          rows={6}
-          name="content"
-          value={content}
+          type="text"
+          name="tags"
+          value={tags}
           onChange={handleChange}
         />
       </Form.Group>
-      {errors?.content?.map((message, idx) => (
+      {errors?.tags?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
           {message}
         </Alert>
@@ -135,10 +135,10 @@ function PostCreateForm() {
             className={`${appStyles.Content} ${styles.Container} d-flex flex-column justify-content-center`}
           >
             <Form.Group className="text-center">
-              {image ? (
+              {post_image ? (
                 <>
                   <figure>
-                    <Image className={appStyles.Image} src={image} rounded />
+                    <Image className={appStyles.Image} src={post_image} rounded />
                   </figure>
                   <div>
                     
