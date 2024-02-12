@@ -6,11 +6,11 @@ import Alert from "react-bootstrap/Alert";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import Image from "react-bootstrap/Image";
 import Container from "react-bootstrap/Container";
 
 import { Link, useHistory } from "react-router-dom";
 
+import signupSignin from "../assets/signup-signin.jpg";
 import styles from "../../styles/SignInUpForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
@@ -120,9 +120,10 @@ function SignInForm() {
         md={6}
         className={`my-auto d-none d-md-block p-2 ${styles.SignInCol}`}
       >
-        <Image
+        <img
+          src={signupSignin}
           className={`${appStyles.FillerImage}`}
-          src={"https://res-console.cloudinary.com/dssjpogsp/thumbnails/v1/image/upload/v1703771514/c2lnbnVwLXNpZ25pbl9vZ3lpYWM=/preview"}
+          alt="signup/signin page image"
         />
       </Col>
     </Row>
