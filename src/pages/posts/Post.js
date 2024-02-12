@@ -131,27 +131,27 @@ const Post = (props) => {
               placement="top"
               overlay={<Tooltip>You can't check your own post!</Tooltip>}
             >
-              <i className="far fa-heart" />
+              <i className="fas fa-bolt" />
             </OverlayTrigger>
           ) : check_id ? (
             <span onClick={handleUncheck}>
-              <i className={`fas fa-heart ${styles.Heart}`} />
+              <i className={`fas fa-bolt ${styles.Heart}`} />
             </span>
           ) : currentUser ? (
             <span onClick={handleCheck}>
-              <i className={`far fa-heart ${styles.HeartOutline}`} />
+              <i className={`fas fa-bolt ${styles.HeartOutline}`} />
             </span>
           ) : (
             <OverlayTrigger
               placement="top"
               overlay={<Tooltip>Log in to check posts!</Tooltip>}
             >
-              <i className="far fa-heart" />
+              <i className="fas fa-bolt" />
             </OverlayTrigger>
           )}
           {check_count}
           <Link to={`/posts/${id}`}>
-            <i className="far fa-comments" />
+            <i className="fas fa-comments" />
           </Link>
           {comments_count}
         </div>

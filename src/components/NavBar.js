@@ -51,7 +51,7 @@ const NavBar = () => {
         activeClassName={styles.Active}
         to="/checked"
       >
-        <i className="fas fa-bolt"></i>Checked
+        <i className="fas fa-bolt"></i>Checks
       </NavLink>
       <NavLink
         className={styles.NavLink}
