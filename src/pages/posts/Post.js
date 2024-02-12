@@ -135,11 +135,11 @@ const Post = (props) => {
             </OverlayTrigger>
           ) : check_id ? (
             <span onClick={handleUncheck}>
-              <i className={`fas fa-bolt ${styles.Heart}`} />
+              <i className={`fas fa-bolt ${styles.Bolt}`} />
             </span>
           ) : currentUser ? (
             <span onClick={handleCheck}>
-              <i className={`fas fa-bolt ${styles.HeartOutline}`} />
+              <i className={`fas fa-bolt ${styles.BoltOutline}`} />
             </span>
           ) : (
             <OverlayTrigger

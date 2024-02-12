@@ -11,15 +11,15 @@ h5 {
   margin: 0 0;
 }
 
-.Heart {
+.Bolt {
   color: #A21E01;
 }
 
-.Heart:hover {
+.Bolt:hover {
   color: #000000;
 }
 
-.HeartOutline:hover {
+.BoltOutline:hover {
   color: #A21E01;
 }
 

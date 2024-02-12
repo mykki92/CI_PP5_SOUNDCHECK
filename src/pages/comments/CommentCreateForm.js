@@ -5,12 +5,14 @@ import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 
 import styles from "../../styles/CommentCreateEditForm.module.css";
+import FeedbackMessage from "../../components/FeedbackMessage";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
 
 function CommentCreateForm(props) {
   const { post, setPost, setComments, profileImage, profile_id } = props;
   const [content, setContent] = useState("");
+  const [showAlert, setShowAlert] = useState(false);
 
   /* 
     Handles changes to the input field
@@ -43,6 +45,7 @@ function CommentCreateForm(props) {
         ],
       }));
       setContent("");
+      setShowAlert(true);
     } catch (err) {
       // console.log(err);
     }
@@ -50,6 +53,12 @@ function CommentCreateForm(props) {
 
   return (
     <Form className="mt-2" onSubmit={handleSubmit}>
+      {showAlert && (
+        <FeedbackMessage
+          variant="info"
+          message="Comment has been posted."
+        />
+      )}
       <Form.Group>
         <InputGroup>
           <Link to={`/profiles/${profile_id}`}>
