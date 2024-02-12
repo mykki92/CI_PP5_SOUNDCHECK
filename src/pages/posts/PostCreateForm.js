@@ -15,6 +15,7 @@ import Upload from "../../assets/upload.png";
 import styles from "../../styles/PostCreateEditForm.module.css";
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
+import FeedbackMessage from "../../components/FeedbackMessage";
 
 import { useHistory } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
@@ -23,6 +24,7 @@ import { useRedirect } from "../../hooks/useRedirect";
 function PostCreateForm() {
   useRedirect("loggedOut");
   const [errors, setErrors] = useState({});
+  const [showAlert, setShowAlert] = useState(false);
 
   const [postData, setPostData] = useState({
     caption: "",
@@ -70,7 +72,10 @@ function PostCreateForm() {
 
     try {
       const { data } = await axiosReq.post("/posts/", formData);
-      history.push(`/posts/${data.id}`);
+      setShowAlert(true);
+      setTimeout(function () {
+        history.push(`/posts/${data.id}`);
+      }, 2500);
     } catch (err) {
       // console.log(err);
       if (err.response?.status !== 401) {
@@ -129,6 +134,12 @@ function PostCreateForm() {
 
   return (
     <Form onSubmit={handleSubmit}>
+      {showAlert && (
+        <FeedbackMessage
+          variant="info"
+          message="Your post has been... posted."
+        />
+      )}
       <Row>
         <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
           <Container

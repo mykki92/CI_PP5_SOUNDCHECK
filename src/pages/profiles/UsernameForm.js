@@ -71,7 +71,7 @@ const UsernameForm = () => {
       {showAlert && (
           <FeedbackMessage
             variant="info"
-            message="Username has been changed."
+            message="Your username has been changed."
           />
         )}
         <Container className={appStyles.Content}>

@@ -73,7 +73,7 @@ const PasswordForm = () => {
         {showAlert && (
           <FeedbackMessage
             variant="info"
-            message="Password has been changed."
+            message="Your password has been changed."
           />
         )}
         <Container className={appStyles.Content}>

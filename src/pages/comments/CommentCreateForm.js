@@ -56,7 +56,7 @@ function CommentCreateForm(props) {
       {showAlert && (
         <FeedbackMessage
           variant="info"
-          message="Comment has been posted."
+          message="Your comment has been posted."
         />
       )}
       <Form.Group>

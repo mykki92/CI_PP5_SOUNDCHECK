@@ -60,11 +60,11 @@ const Comment = (props) => {
   }; 
 
   return isDeleted ? (
-    <FeedbackMessage variant="info" message="Comment has been deleted" />
+    <FeedbackMessage variant="info" message="Your comment has been deleted" />
   ) : (
     <div>
       {showAlert && (
-        <FeedbackMessage variant="info" message="Comment has been updated" />
+        <FeedbackMessage variant="info" message="Your comment has been updated" />
       )}
       <hr />
       <Media>
