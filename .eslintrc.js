@@ -28,6 +28,6 @@ module.exports = {
         "react"
     ],
     "rules": {
-        "no-empty": false,
+        "no-empty": 0,
     }
 }
