@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import logo from "../assets/soundcheck-logo-light.png";
 import styles from "../styles/NavBar.module.css";

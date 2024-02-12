@@ -128,7 +128,7 @@ function ProfilePage() {
           // InfiniteScroll component handles loading content continually without pagination
           <InfiniteScroll
             children={profilePosts.results.map((post) => (
-                <ProfilePost key={post.id} {...post} setPosts={setProfilePosts} />
+              <ProfilePost key={post.id} {...post} setPosts={setProfilePosts} />
             ))}
             className={styles.GridContainer}
             dataLength={profilePosts.results.length}
