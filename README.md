@@ -131,7 +131,7 @@ The Google Font family "Righteous" was used as I felt it was a clear and underst
 <details><summary>Sign In</summary>
 <img src="docs/wireframes/wireframe-signin.png">
 </details>
-<details><summary>Home/Feed/Checked</summary>
+<details><summary>Home/Feed/Checks</summary>
 <img src="docs/wireframes/wireframe-home-feed-checked.png">
 </details>
 <details><summary>Add Post</summary>
@@ -209,7 +209,7 @@ There were various components created and reused across this application.
 - `<FeedbackMessage />` - component for displaying feedback messages to the user upon editing/deleting comments, deleting post, updating profile information or a password.
 - User stories covered: 32
 
-- `<NavBar />` - reusable component that features on each page of the application. For signed in users it shows links to Home, Feed, Checked, Add Post, Profile and Sign Out. For signed out users, it displays links to sign up or sign in.
+- `<NavBar />` - reusable component that features on each page of the application. For signed in users it shows links to Home, Feed, Checks, Add Post, Profile and Sign Out. For signed out users, it displays links to sign up or sign in.
 - User stories covered: 2, 3
 
 - `<PageNotFound />` - component for displaying a 404 graphic error message with a return to menu button when a user enters an invalid URL.
@@ -238,7 +238,7 @@ The API for this Front-End application was built with the Django REST Framework.
 ### Navigation Bar
 - Featured at the top of all pages
 - Two variants of the navbar:
-  - Signed in users will see links to Home, Feed, Checked, Add Post, Profile and Sign Out
+  - Signed in users will see links to Home, Feed, Checks, Add Post, Profile and Sign Out
   - Signed out users will see links to sign up or sign in
 - The nav bar is fully responsive and changes to a toggler (hamburger menu) on smaller size screens
 - User stories covered: 2, 3
@@ -285,8 +285,8 @@ The API for this Front-End application was built with the Django REST Framework.
 </details>
 
 ### Add Post
-- Contains image, caption and post.
-- Post field is optional.
+- Contains image, caption and tags.
+- Caption field is optional, while the tags field is required to make the posts more compatible with filtered searching.
 - Allows users to share their pictures with others, will be displayed on their profile page, the home page and the feed of users that have followed them.
 - User stories covered: 7, 8, 16
 
@@ -308,7 +308,7 @@ The API for this Front-End application was built with the Django REST Framework.
 ### Checks
 - Allows users to express their interest in the post.
 - Users cannot check their own posts.
-- The "Checked" page allows users to view a list of posts they have previously Checked.
+- The "Checks" page allows users to view a list of posts they have previously Checked.
 - User stories covered: 11, 19
 
 <details><summary>Screenshots</summary>
@@ -385,7 +385,7 @@ The API for this Front-End application was built with the Django REST Framework.
 ### Top Profiles
 - Displays a list of the ten most followed users in the app, or a list of four on smaller screens
 - Contains follow buttons next to username which allow users to follow these profiles
-- Featured on the Home, Feed and Checked pages
+- Featured on the Home, Feed and Checks pages
 - User stories covered: 29
 
 <details><summary>Screenshots</summary>
@@ -395,7 +395,7 @@ The API for this Front-End application was built with the Django REST Framework.
 ### Search Bar
 - Allows users to search through all posts by caption or username
 - Allows search through checked posts or posts by followed users
-- Features on the Home, Feed and Checked pages
+- Features on the Home, Feed and Checks pages
 - User stories covered: 21
 
 <details><summary>Screenshots</summary>
@@ -798,7 +798,7 @@ The WAVE WebAIM web accessibility evaluation tool was used to test the websites 
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |------------|------------|---------------------|-------------------|
-| | Navigate to the home, feed or checked page | Posts are displayed with a date stamp with most recent posts at the top of the list | Works as expected |
+| | Navigate to the home, feed or checks page | Posts are displayed with a date stamp with most recent posts at the top of the list | Works as expected |
 
 <details><summary>Screenshots</summary>
   <img src="docs/testing/user-story-testing-17.png">
@@ -811,7 +811,7 @@ The WAVE WebAIM web accessibility evaluation tool was used to test the websites 
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |------------|------------|---------------------|-------------------|
-| Infinite Scroll | Navigate to the home, feed, checked or profile page | Displays list of all available posts without changing pages. Displays a spinning icon if the posts have not been loaded | Works as expected |
+| Infinite Scroll | Navigate to the home, feed, checks or profile page | Displays list of all available posts without changing pages. Displays a spinning icon if the posts have not been loaded | Works as expected |
 
 <details><summary>Screenshots</summary>
   <img src="docs/testing/user-story-testing-18-01.png">
@@ -828,7 +828,7 @@ The WAVE WebAIM web accessibility evaluation tool was used to test the websites 
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |------------|------------|---------------------|-------------------|
-| Checks | Click the “Checked” button on the nav bar  | A list is displayed of all posts that you have previously checked | Works as expected |
+| Checks | Click the “Checks” button on the nav bar  | A list is displayed of all posts that you have previously checked | Works as expected |
 
 <details><summary>Screenshots</summary>
   <img src="docs/testing/user-story-testing-19-01.png">
@@ -857,7 +857,7 @@ The WAVE WebAIM web accessibility evaluation tool was used to test the websites 
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |------------|------------|---------------------|-------------------|
-| Search Bar | Select the search bar at the top of the home, feed or checked pages and enter a keyword  | A list is displayed of all posts with the keyword in the title | Works as expected |
+| Search Bar | Select the search bar at the top of the home, feed or checks pages and enter a keyword  | A list is displayed of all posts with the keyword in the title | Works as expected |
 
 <details><summary>Screenshots</summary>
   <img src="docs/testing/user-story-testing-21.png">
@@ -886,7 +886,7 @@ The WAVE WebAIM web accessibility evaluation tool was used to test the websites 
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |------------|------------|---------------------|-------------------|
-| Avatar | Navigate to the home, feed or checked page, or any users profile page  | User avatars are displayed on their profile page and alongside their username in posts and comments | Works as expected |
+| Avatar | Navigate to the home, feed or checks page, or any users profile page  | User avatars are displayed on their profile page and alongside their username in posts and comments | Works as expected |
 
 <details><summary>Screenshots</summary>
   <img src="docs/testing/user-story-testing-23-01.png">

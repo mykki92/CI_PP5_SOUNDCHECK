@@ -75,7 +75,7 @@ function PostCreateForm() {
       setShowAlert(true);
       setTimeout(function () {
         history.push(`/posts/${data.id}`);
-      }, 2500);
+      }, 2000);
     } catch (err) {
       // console.log(err);
       if (err.response?.status !== 401) {

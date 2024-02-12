@@ -104,7 +104,7 @@ const Post = (props) => {
       <Card.Body>
         <Media className="align-items-center justify-content-between">
           <Link to={`/profiles/${profile_id}`}>
-            <Avatar src={profile_image} height={55} />
+            <Avatar src={`/profiles/${profile_image}`} height={55} />
             {owner}
           </Link>
           {/* Displays the dropdown menu with options to edit or delete post */}
