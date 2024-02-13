@@ -137,7 +137,7 @@ function PostCreateForm() {
       {showAlert && (
         <FeedbackMessage
           variant="info"
-          message="Your post has been... posted."
+          message="Your post has been... posted!"
         />
       )}
       <Row>
