@@ -3,9 +3,9 @@ import Dropdown from "react-bootstrap/Dropdown";
 import styles from "../styles/DropdownMenu.module.css";
 import { useHistory } from "react-router";
 
-// The forwardRef is important!!
+// The forwardRef is important
 // Dropdown needs access to the DOM node in order to position the Menu
-const ThreeDots = React.forwardRef(({ onClick }, ref) => (
+const DropdownDots = React.forwardRef(({ onClick }, ref) => (
   <i
     className="fas fa-ellipsis-v"
     ref={ref}
@@ -15,6 +15,7 @@ const ThreeDots = React.forwardRef(({ onClick }, ref) => (
     }}
   />
 ));
+DropdownDots.displayName = "DropdownDots";
 
 /*
   Dropdown menu with options to edit or delete a post
@@ -23,7 +24,7 @@ const ThreeDots = React.forwardRef(({ onClick }, ref) => (
 export const DropdownMenu = ({ handleEdit, handleDelete }) => {
   return (
     <Dropdown className="ml-auto" drop="left">
-      <Dropdown.Toggle as={ThreeDots} />
+      <Dropdown.Toggle as={DropdownDots} />
 
       <Dropdown.Menu
         className="text-center"
@@ -57,7 +58,7 @@ export const ProfileEditDropdown = ({ id }) => {
   const history = useHistory();
   return (
     <Dropdown className={`ml-auto px-3 ${styles.Absolute}`} drop="left">
-      <Dropdown.Toggle as={ThreeDots} />
+      <Dropdown.Toggle as={DropdownDots} />
       <Dropdown.Menu>
         <Dropdown.Item
           onClick={() => history.push(`/profiles/${id}/edit`)}
