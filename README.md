@@ -831,8 +831,7 @@ The WAVE WebAIM web accessibility evaluation tool was used to test the websites 
 | Checks | Click the “Checks” button on the nav bar  | A list is displayed of all posts that you have previously checked | Works as expected |
 
 <details><summary>Screenshots</summary>
-  <img src="docs/testing/user-story-testing-19-01.png">
-  <img src="docs/testing/user-story-testing-19-02.png">
+  <img src="docs/testing/user-story-testing-19.png">
 </details>
 <br>
 <hr>
@@ -1054,6 +1053,8 @@ Testing has been carried out on the following browsers:
 | ------- | ------- |
 | Upload and No Results icons are displaying too large | Resize original images and reupload |
 | Infinite scroll is not displaying in grid format on the profile page | Put the grid format as part of the infinite scroll elements properties rather than its parent div container |
+| Post edit form requires user to reupload image every time, even if only editing caption or tags | Remove duplicate formDate.append command before the if statement that handles the image input in the handleSubmit function |
+| Comment count on post detail view does not update until the page has been refreshed when deleting a comment | Error in the handleDelete function refers to comments_number, corrected to comments_count |
 
 
 ## Deployment
